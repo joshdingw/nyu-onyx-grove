@@ -1,0 +1,28 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "date": "2026-06-12T00:00:00.000Z",
+      "name": "Graduation Ceremony",
+      "isNoSchool": true,
+      "isEarlyDismissal": false,
+      "isSchoolClosed": false,
+      "title": "Graduation Ceremony",
+      "description": "Senior graduation ceremony at 2:00 PM in the auditorium. Doors open at 1:00 PM.",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "category": {
+        "links": {
+          "self": "../SchoolCalendarCategory/48ff874d-e22c-4672-a7a1-bda38c837c19"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../school-calendar",
+        "name": "SchoolCalendarEvent"
+      }
+    }
+  }
+}

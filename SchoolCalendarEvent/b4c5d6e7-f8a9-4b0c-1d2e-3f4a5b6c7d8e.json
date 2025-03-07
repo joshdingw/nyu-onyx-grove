@@ -1,0 +1,28 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "date": "2026-01-05T00:00:00.000Z",
+      "name": "Classes Resume",
+      "isNoSchool": false,
+      "isEarlyDismissal": false,
+      "isSchoolClosed": false,
+      "title": "Classes Resume",
+      "description": "Students return from winter break.",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "category": {
+        "links": {
+          "self": "../SchoolCalendarCategory/4161317d-92e5-49c3-9d63-ee39e570896d"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../school-calendar",
+        "name": "SchoolCalendarEvent"
+      }
+    }
+  }
+}

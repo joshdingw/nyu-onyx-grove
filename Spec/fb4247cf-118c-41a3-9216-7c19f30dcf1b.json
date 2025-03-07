@@ -1,0 +1,30 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Student Cohort Card",
+      "readMe": "**Purpose**: Student cohorts group together students for the purpose of class assignments and activity management. This allows for more personalized and efficient educational experiences.\n\n**Formation**: Cohorts are typically formed based on students' grade levels, academic interests, or specific class requirements. Administrators or educators can use various criteria to assemble these groups.\n\n**Benefits**:\n  - Facilitates collaborative learning and interaction among students.\n  - Helps in organizing events and activities tailored to specific groups.\n  - Supports targeted teaching strategies and interventions.\n\n**Goals**:\n  - Enhance student engagement and participation in class activities.\n  - Provide a manageable framework for educators to deliver customized instruction.\n  - Promote a sense of community and belonging among students.\n\n**Usage**:\n  - Educators can assign tasks and resources to specific cohorts.\n  - Activity coordinators can plan and execute cohort-based events and workshops.\n  - Progress tracking and assessments can be aligned with cohort goals.",
+      "ref": {
+        "name": "StudentCohort",
+        "module": "../student-cohort"
+      },
+      "specType": "card",
+      "containedExamples": [],
+      "description": "Groups students for class assignments and activity management",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "linkedExamples.0": {
+        "links": {
+          "self": "../StudentCohort/b7754974-a86d-4997-8ea8-2ec32126a131"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "https://cardstack.com/base/spec",
+        "name": "Spec"
+      }
+    }
+  }
+}

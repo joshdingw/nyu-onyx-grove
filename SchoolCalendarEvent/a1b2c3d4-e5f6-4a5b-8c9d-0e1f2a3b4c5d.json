@@ -1,0 +1,28 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "date": "2025-08-25T00:00:00.000Z",
+      "name": "First Day of School",
+      "isNoSchool": false,
+      "isEarlyDismissal": false,
+      "isSchoolClosed": false,
+      "title": "First Day of School",
+      "description": "Welcome back students! First day of the 2025-26 academic year.",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "category": {
+        "links": {
+          "self": "../SchoolCalendarCategory/4161317d-92e5-49c3-9d63-ee39e570896d"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../school-calendar",
+        "name": "SchoolCalendarEvent"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "fullName": "Maya Santiago",
+      "role": "Specialty Teacher",
+      "workEmail": "msantiago@onyx-grove.edu",
+      "phone": "555-247-5678",
+      "startDate": "2023-08-01T00:00:00.000Z",
+      "active": true,
+      "profile": "Dynamic arts educator with expertise in both visual arts and music. Specializes in integrating creative expression with core subjects and fostering artistic confidence in elementary students.",
+      "title": "Maya Santiago",
+      "description": "Elementary Arts and Music Specialist integrating creative expression with core subjects",
+      "thumbnailURL": "https://randomuser.me/api/portraits/women/45.jpg"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../staff",
+        "name": "Staff"
+      }
+    }
+  }
+}

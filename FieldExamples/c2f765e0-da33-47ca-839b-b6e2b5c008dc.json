@@ -1,0 +1,59 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "goals": [
+        {
+          "goalSummary": "Work on handwwriting",
+          "rating": 3,
+          "period": {
+            "periodLabel": "Q3 2024"
+          },
+          "customStartDate": "2025-02-26",
+          "customEndDate": "2025-02-28"
+        },
+        {
+          "goalSummary": "Work on mending",
+          "rating": 2,
+          "period": {
+            "periodLabel": ""
+          },
+          "customStartDate": "2025-02-26",
+          "customEndDate": "2025-03-07"
+        }
+      ],
+      "period": [
+        {
+          "periodLabel": "Summer 2024"
+        },
+        {
+          "periodLabel": "2023-24"
+        },
+        {
+          "periodLabel": "Week 23 2025"
+        }
+      ],
+      "title": "Example of Both",
+      "description": null,
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "goals.0.domainArea": {
+        "links": {
+          "self": "../DomainArea/c57f80da-8a46-4e77-83c6-cf6f94738d12"
+        }
+      },
+      "goals.1.domainArea": {
+        "links": {
+          "self": "../DomainArea/8d8794c8-8871-43cc-bc33-a2eb973782aa"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../field-examples",
+        "name": "FieldExamples"
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "currentConditions": {
+        "city": "Anchorage",
+        "timestamp": "2025-02-26T05:30:49.127Z",
+        "temperature": 20,
+        "conditions": "Snowy",
+        "humidity": 72,
+        "windSpeed": 12,
+        "windDirection": "Northwest",
+        "pressure": 1018,
+        "visibility": 8,
+        "forecast": [
+          {
+            "date": "2024-09-01T00:00:00.000Z",
+            "temperature": null,
+            "conditions": "Snowy",
+            "highTemp": 25,
+            "lowTemp": 15
+          },
+          {
+            "date": "2024-09-02T00:00:00.000Z",
+            "temperature": null,
+            "conditions": "Snow Showers",
+            "highTemp": 24,
+            "lowTemp": 14
+          },
+          {
+            "date": "2024-09-03T00:00:00.000Z",
+            "temperature": null,
+            "conditions": "Cloudy",
+            "highTemp": 23,
+            "lowTemp": 13
+          },
+          {
+            "date": "2024-09-04T00:00:00.000Z",
+            "temperature": null,
+            "conditions": "Snowy",
+            "highTemp": 22,
+            "lowTemp": 12
+          },
+          {
+            "date": "2024-09-05T00:00:00.000Z",
+            "temperature": null,
+            "conditions": "Snow Showers",
+            "highTemp": 21,
+            "lowTemp": 11
+          },
+          {
+            "date": "2024-09-06T00:00:00.000Z",
+            "temperature": null,
+            "conditions": "Snowy",
+            "highTemp": 20,
+            "lowTemp": 10
+          },
+          {
+            "date": "2024-09-07T00:00:00.000Z",
+            "temperature": null,
+            "conditions": "Cloudy",
+            "highTemp": 19,
+            "lowTemp": 9
+          }
+        ]
+      },
+      "title": "Anchorage Weather Report",
+      "description": "Current weather conditions and 5-day forecast for Anchorage, featuring typical Bay Area weather patterns with morning fog and mild temperatures.",
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../weather-report",
+        "name": "WeatherReport"
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "building": "Greenwood Academy",
+      "floor": "2",
+      "room": "103",
+      "capacity": 25,
+      "designatedUse": "Education",
+      "equipment": [
+        "smart board",
+        "reading corner",
+        "art supplies",
+        "student tablets",
+        "science corner"
+      ],
+      "title": "Room 103 - Grade 3 Classroom",
+      "description": "Modern third-grade classroom equipped with smart technology, reading corner, and dedicated spaces for art and science activities",
+      "thumbnailURL": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../location",
+        "name": "Location"
+      }
+    }
+  }
+}

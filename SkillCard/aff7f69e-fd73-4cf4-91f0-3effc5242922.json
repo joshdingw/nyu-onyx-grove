@@ -1,0 +1,17 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "instructions": "- Student are linked to Classes via Cohorts",
+      "title": "LMS Specific Instructions",
+      "description": null,
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "https://cardstack.com/base/skill-card",
+        "name": "SkillCard"
+      }
+    }
+  }
+}

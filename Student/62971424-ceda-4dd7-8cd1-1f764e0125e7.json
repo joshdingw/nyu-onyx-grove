@@ -1,0 +1,27 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "fullName": "Emily Chen",
+      "dateOfBirth": "2015-06-15",
+      "staffingRatio": "1:25",
+      "active": true,
+      "title": "Emily Chen",
+      "description": "Third-grade student with strong interest in music and science",
+      "thumbnailURL": "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    "relationships": {
+      "parentInfo": {
+        "links": {
+          "self": "../ParentInfo/e7a39708-7cd8-49ab-b35e-f7fabf0475d7"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../student",
+        "name": "Student"
+      }
+    }
+  }
+}

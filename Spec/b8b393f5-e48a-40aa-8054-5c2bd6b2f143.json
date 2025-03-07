@@ -1,0 +1,30 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Offering Card",
+      "readMe": null,
+      "ref": {
+        "name": "Offering",
+        "module": "https://app.boxel.ai/slewis88/onyx-grove/offering"
+      },
+      "specType": "card",
+      "containedExamples": [],
+      "description": "Base card type for educational offerings including classes and clubs",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "linkedExamples": {
+        "links": {
+          "self": null
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "https://cardstack.com/base/spec",
+        "name": "Spec"
+      }
+    }
+  }
+}

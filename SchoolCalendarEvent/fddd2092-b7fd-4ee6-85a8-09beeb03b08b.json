@@ -1,0 +1,28 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "date": "2025-12-22T00:00:00.000Z",
+      "name": "Winter Break Begins - No School",
+      "isNoSchool": true,
+      "isEarlyDismissal": false,
+      "isSchoolClosed": true,
+      "title": "Winter Break",
+      "description": "School closed for winter break. Classes resume January 5, 2026.",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "category": {
+        "links": {
+          "self": "../SchoolCalendarCategory/9a1ed0ff-5c2a-489f-88ca-be7331342400"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../school-calendar",
+        "name": "SchoolCalendarEvent"
+      }
+    }
+  }
+}

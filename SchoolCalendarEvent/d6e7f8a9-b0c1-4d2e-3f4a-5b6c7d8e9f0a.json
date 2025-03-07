@@ -1,0 +1,28 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "date": "2026-01-29T00:00:00.000Z",
+      "name": "End of Second Quarter - Early Dismissal",
+      "isNoSchool": false,
+      "isEarlyDismissal": true,
+      "isSchoolClosed": false,
+      "title": "End of Second Quarter",
+      "description": "Last day of the second quarter. Students will be dismissed at 12:30 PM. Report cards will be available online February 5.",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "category": {
+        "links": {
+          "self": "../SchoolCalendarCategory/aac1c3f6-73c3-4e67-a141-b90eebd89f7e"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../school-calendar",
+        "name": "SchoolCalendarEvent"
+      }
+    }
+  }
+}

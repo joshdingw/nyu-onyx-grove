@@ -1,0 +1,28 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "date": "2026-06-08T00:00:00.000Z",
+      "name": "Senior Breakfast",
+      "isNoSchool": false,
+      "isEarlyDismissal": false,
+      "isSchoolClosed": false,
+      "title": "Senior Breakfast",
+      "description": "Special breakfast for graduating seniors at 8:00 AM in the cafeteria.",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "category": {
+        "links": {
+          "self": "../SchoolCalendarCategory/48ff874d-e22c-4672-a7a1-bda38c837c19"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../school-calendar",
+        "name": "SchoolCalendarEvent"
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "fullName": "Alexander Rodriguez",
+      "dateOfBirth": "2013-03-12",
+      "staffingRatio": "3:1",
+      "active": true,
+      "title": "Alexander Rodriguez",
+      "description": "Fifth-grade student excelling in mathematics and piano performance",
+      "thumbnailURL": "https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../student",
+        "name": "Student"
+      }
+    }
+  }
+}

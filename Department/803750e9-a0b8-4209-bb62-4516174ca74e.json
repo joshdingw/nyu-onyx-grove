@@ -1,0 +1,21 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Computer Science",
+      "description": "Computer Science at NYU",
+      "foundedDate": "1990-01-01",
+      "headOfDepartment": "I. Alex",
+      "facultyCount": "162",
+      "website": "cs.nyu.edu",
+      "title": null,
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../department",
+        "name": "Department"
+      }
+    }
+  }
+}

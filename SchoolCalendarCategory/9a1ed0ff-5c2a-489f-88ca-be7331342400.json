@@ -1,0 +1,18 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Holiday",
+      "color": "#e53935",
+      "title": "Holiday",
+      "description": "Official holidays and school breaks",
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../school-calendar",
+        "name": "SchoolCalendarCategory"
+      }
+    }
+  }
+}

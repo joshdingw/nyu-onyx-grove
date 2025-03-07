@@ -1,0 +1,17 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "category": "Academic",
+      "subCategory": "Reading",
+      "description": "Core literacy skills including comprehension, fluency, and analysis",
+      "thumbnailURL": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../domain-area",
+        "name": "DomainArea"
+      }
+    }
+  }
+}

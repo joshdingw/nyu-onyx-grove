@@ -1,0 +1,23 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "fullName": "Zara Patel",
+      "role": "Assistant Teacher",
+      "workEmail": "zpatel@onyx-grove.edu",
+      "phone": "555-247-1234",
+      "startDate": "2023-08-01T00:00:00.000Z",
+      "active": true,
+      "profile": "Dedicated assistant teacher with a background in elementary education. Specializes in providing individualized student support and small group instruction.",
+      "title": "Zara Patel",
+      "description": "Grade 3 Assistant Teacher specializing in small group instruction",
+      "thumbnailURL": "https://randomuser.me/api/portraits/women/33.jpg"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../staff",
+        "name": "Staff"
+      }
+    }
+  }
+}

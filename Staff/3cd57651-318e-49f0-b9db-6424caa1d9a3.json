@@ -1,0 +1,23 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "fullName": "Michael Chen",
+      "role": "Music Teacher",
+      "workEmail": "mchen@onyx-grove.edu",
+      "phone": "555-867-3421",
+      "startDate": "2023-08-01T00:00:00.000Z",
+      "active": true,
+      "profile": "Passionate music educator with expertise in orchestral and choral instruction. Experienced in directing school musical productions and managing instrumental programs. Skilled in piano, violin, and vocal instruction.",
+      "title": "Michael Chen",
+      "description": "K-8 Music Teacher, Orchestra and Choir Director",
+      "thumbnailURL": "https://randomuser.me/api/portraits/men/42.jpg"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../staff",
+        "name": "Staff"
+      }
+    }
+  }
+}

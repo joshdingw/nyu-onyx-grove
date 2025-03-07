@@ -1,0 +1,30 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Class Card",
+      "readMe": "# Class Card\n\nThe Class card represents a specific class offering within Onyx Grove. It tracks key information about class sections including:\n\n## Core Fields\n- `classNumber`: Numeric identifier for the class\n- `section`: Section identifier (e.g. A, B, etc)\n- `type`: The type/category of class\n- `leadTeacher`: Primary instructor for the class\n- `additionalStaff`: Other staff members supporting the class\n- `cohort`: The student cohort assigned to this class\n- `students`: Computed field that automatically pulls students from the linked cohort\n\n## Relationships\n- Links to Staff cards for teachers/staff\n- Links to StudentCohort for class roster management\n- Computed relationship to Student cards via cohort\n\n## Usage\nThis card is used to organize and track class offerings, their assigned staff, and enrolled students. The computed students field automatically stays in sync with cohort changes.\n\n## Display\nUses the chalkboard icon to represent classes in the UI.",
+      "ref": {
+        "name": "Class",
+        "module": "https://app.boxel.ai/slewis88/onyx-grove/class-offering"
+      },
+      "specType": "card",
+      "containedExamples": [],
+      "description": "Defines a class section with staff assignments and student enrollment through cohort management",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "linkedExamples.0": {
+        "links": {
+          "self": "../Class/5ce5fde6-9825-4733-929f-2e05976f5f55"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "https://cardstack.com/base/spec",
+        "name": "Spec"
+      }
+    }
+  }
+}

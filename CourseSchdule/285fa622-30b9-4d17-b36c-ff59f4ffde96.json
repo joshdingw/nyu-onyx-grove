@@ -1,0 +1,25 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "courseName": "OS",
+      "courseCode": "1108",
+      "instructor": "Tang Yang",
+      "room": "109",
+      "mondayTime": "7:00 - 9:00p.m.",
+      "tuesdayTime": null,
+      "wednesdayTime": null,
+      "thursdayTime": null,
+      "fridayTime": null,
+      "title": null,
+      "description": null,
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../course-schdule",
+        "name": "CourseSchdule"
+      }
+    }
+  }
+}

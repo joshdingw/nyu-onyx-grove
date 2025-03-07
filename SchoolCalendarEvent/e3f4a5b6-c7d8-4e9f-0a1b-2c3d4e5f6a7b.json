@@ -1,0 +1,28 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "date": "2026-04-24T00:00:00.000Z",
+      "name": "Spring Dance",
+      "isNoSchool": false,
+      "isEarlyDismissal": false,
+      "isSchoolClosed": false,
+      "title": "Spring Dance",
+      "description": "Annual spring dance for high school students from 7:00 PM to 10:00 PM in the gymnasium.",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "category": {
+        "links": {
+          "self": "../SchoolCalendarCategory/68167d99-f13f-41ac-a673-0d1da4b54969"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../school-calendar",
+        "name": "SchoolCalendarEvent"
+      }
+    }
+  }
+}
