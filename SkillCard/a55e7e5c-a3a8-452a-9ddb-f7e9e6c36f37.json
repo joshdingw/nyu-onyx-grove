@@ -1,0 +1,18 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "instructions": "We use the same naming convention for boxel icons as used in https://tabler.io/icons.",
+      "commands": [],
+      "title": null,
+      "description": null,
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "https://cardstack.com/base/skill-card",
+        "name": "SkillCard"
+      }
+    }
+  }
+}
