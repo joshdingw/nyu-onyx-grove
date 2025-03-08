@@ -1,7 +1,6 @@
 {
   "data": {
     "type": "card",
-    "id": "fdef480d-e0ff-404a-9f67-6662991243ff",
     "attributes": {
       "name": "Algebra Practice",
       "description": "Complete exercises on pages 45-47, focusing on quadratic equations and their applications. Students should show all work and include explanations for each step.",
@@ -9,7 +8,17 @@
       "status": "in_progress",
       "completionPercentage": 60,
       "priority": "high",
-      "category": "Mathematics"
+      "category": "Mathematics",
+      "estimatedHours": null,
+      "title": null,
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "assignedTo": {
+        "links": {
+          "self": "../Student/b843ea83-65b3-4e9c-9dc6-be1796eece70"
+        }
+      }
     },
     "meta": {
       "adoptsFrom": {
