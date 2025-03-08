@@ -1,7 +1,6 @@
 {
   "data": {
     "type": "card",
-    "id": "task2",
     "attributes": {
       "name": "Geometry Proofs",
       "description": "Complete triangle similarity proofs and demonstrate understanding of geometric principles. Include visual diagrams and step-by-step explanations for each proof.",
@@ -9,7 +8,17 @@
       "status": "completed",
       "completionPercentage": 100,
       "priority": "medium",
-      "category": "Mathematics"
+      "category": "Mathematics",
+      "estimatedHours": null,
+      "title": null,
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "assignedTo": {
+        "links": {
+          "self": "../Student/62971424-ceda-4dd7-8cd1-1f764e0125e7.json"
+        }
+      }
     },
     "meta": {
       "adoptsFrom": {

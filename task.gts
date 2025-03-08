@@ -3,7 +3,8 @@ import {
   Component,
   field,
   contains,
-  containsMany
+  containsMany,
+  linksTo
 } from 'https://cardstack.com/base/card-api';
 import StringField from 'https://cardstack.com/base/string';
 import DateField from 'https://cardstack.com/base/date';
@@ -15,6 +16,7 @@ import { fn, get, eq } from '@ember/helper';
 import CalendarIcon from '@cardstack/boxel-icons/calendar';
 import AlertCircleIcon from '@cardstack/boxel-icons/alert-circle';
 import ClockIcon from '@cardstack/boxel-icons/clock';
+import { Student } from './student';
 
 export class Task extends CardDef {
   static displayName = "Task";
@@ -27,6 +29,7 @@ export class Task extends CardDef {
   @field priority = contains(StringField);
   @field category = contains(StringField);
   @field estimatedHours = contains(NumberField);
+  @field assignedTo = linksTo(() => Student);
 
   @field remainingTime = contains(StringField, {
     computeVia: function(this: Task) {
@@ -93,6 +96,11 @@ export class Task extends CardDef {
             <h2>{{@model.name}}</h2>
           </div>
           <div class='task-meta'>
+            {{#if @model.assignedTo}}
+              <div class='assigned-to'>
+                <span class='student-name'>{{@model.assignedTo.fullName}}</span>
+              </div>
+            {{/if}}
             <span class='priority-badge {{this.priorityClass}}'>
               {{@model.priority}}
             </span>
@@ -423,6 +431,20 @@ export class Task extends CardDef {
           font-weight: 500;
           color: #1a1a1a;
         }
+
+        .assigned-to {
+          display: flex;
+          align-items: center;
+          padding: 4px 12px;
+          border-radius: 20px;
+          background-color: #e3f2fd;
+          color: #1976d2;
+        }
+
+        .student-name {
+          font-weight: 500;
+          font-size: 0.875rem;
+        }
       </style>
     </template>
   }
@@ -464,7 +486,12 @@ export class Task extends CardDef {
               {{/if}}
             </div>
             <div class='task-info'>
-              <span class='task-name'>{{@model.name}}</span>
+              <div class='task-top'>
+                <span class='task-name'>{{@model.name}}</span>
+                {{#if @model.assignedTo}}
+                  <span class='assigned-student'>{{@model.assignedTo.fullName}}</span>
+                {{/if}}
+              </div>
               <div class='task-details'>
                 <span class='due-date'>
                   <CalendarIcon class='calendar-icon' />
@@ -612,6 +639,21 @@ export class Task extends CardDef {
         .progress-fill.completed {
           background-color: #4caf50;
         }
+
+        .task-top {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .assigned-student {
+          font-size: 0.75rem;
+          padding: 2px 8px;
+          background-color: #e3f2fd;
+          color: #1976d2;
+          border-radius: 12px;
+          font-weight: 500;
+        }
       </style>
     </template>
   }
@@ -671,8 +713,8 @@ export class Task extends CardDef {
                 <@fields.name />
               </div>
               <div class='form-group'>
-                <label>Category</label>
-                <@fields.category />
+                <label>Assigned To</label>
+                <@fields.assignedTo />
               </div>
             </div>
             
@@ -717,6 +759,14 @@ export class Task extends CardDef {
                   <label>Name</label>
                   <span>{{@model.name}}</span>
                 </div>
+                {{#if @model.assignedTo}}
+                  <div class='info-group'>
+                    <label>Assigned To</label>
+                    <div class='assigned-info'>
+                      <span class='student-name'>{{@model.assignedTo.fullName}}</span>
+                    </div>
+                  </div>
+                {{/if}}
                 <div class='info-group'>
                   <label>Category</label>
                   <span class='category-badge'>{{@model.category}}</span>
@@ -1016,6 +1066,15 @@ export class Task extends CardDef {
         .remaining-time.overdue {
           color: #d32f2f;
           font-weight: 600;
+        }
+
+        .assigned-info {
+          display: flex;
+          align-items: center;
+        }
+
+        .student-name {
+          font-weight: 500;
         }
       </style>
     </template>
