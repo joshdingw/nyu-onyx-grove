@@ -1,0 +1,33 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "courseTitle": "Introduction to Computer Science",
+      "semester": "Fall 2023",
+      "overallObjectives": "Students will gain a comprehensive foundation in computer science principles, developing strong problem-solving abilities through hands-on programming exercises and theoretical concept exploration. This course combines practical coding skills with fundamental computing concepts, preparing students for advanced computer science courses and real-world software development challenges. Emphasis is placed on developing algorithmic thinking and software engineering best practices.",
+      "classObjectives": [
+        "Week 1 | Programming Fundamentals: Master variables, data types, operators, and basic syntax through hands-on Python exercises",
+        "Week 2 | Control Structures: Build programs using conditional statements, loops, and flow control concepts",
+        "Week 3 | Functions & Modularity: Design reusable code components with proper scope, parameters, and return values",
+        "Week 4 | Data Structures: Implement arrays, lists, and basic algorithms for efficient data manipulation",
+        "Week 5 | Object-Oriented Programming: Create classes, objects, and inheritance hierarchies for game development",
+        "Week 6 | File Operations: Master file handling, I/O techniques, and error management strategies",
+        "Week 7 | Algorithm Design: Study sorting, searching, and optimization techniques with complexity analysis",
+        "Week 8 | Final Project: Develop a comprehensive application showcasing all learned concepts"
+      ],
+      "courseImage": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80",
+      "departmentIcon": "https://cdn-icons-png.flaticon.com/512/2920/2920277.png",
+      "progressPercentage": "33%",
+      "lastUpdated": "2023-12-20",
+      "title": null,
+      "description": null,
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../course-learning-objectives",
+        "name": "CourseLearningObjectives"
+      }
+    }
+  }
+}

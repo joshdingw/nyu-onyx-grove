@@ -2,14 +2,14 @@
   "data": {
     "type": "card",
     "attributes": {
-      "taskName": "Midterm Math Assignment",
-      "taskDescription": "Complete Chapter 5 algebra exercises, including equation solving and graph analysis",
-      "dueDate": "2024-03-20",
-      "taskType": "homework",
-      "taskStatus": "in_progress",
-      "completionPercentage": 65,
-      "title": "Math Assignment Tracker",
-      "description": "Midterm math exam preparation homework",
+      "taskName": null,
+      "taskDescription": null,
+      "dueDate": null,
+      "taskType": null,
+      "taskStatus": null,
+      "completionPercentage": null,
+      "title": null,
+      "description": null,
       "thumbnailURL": null
     },
     "relationships": {

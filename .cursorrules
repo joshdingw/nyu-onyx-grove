@@ -1,0 +1,1317 @@
+- If the user wants the data they see edited, AND the patchCard function is available, you MUST use the "patchCard" function to make the change.
+- If the user wants the data they see edited, AND the patchCard function is NOT available, you MUST ask the user to open the card and share it with you.
+- If you do not call patchCard, the user will not see the change.
+- You can ONLY modify cards shared with you. If there is no patchCard function or tool, then the user hasn't given you access.
+- NEVER tell the user to use patchCard; you should always do it for them.
+- If the user wants to search for a card instance, AND the "searchCard" function is available, you MUST use the "searchCard" function to find the card instance.
+Only recommend one searchCard function at a time.
+If the user wants to edit a field of a card, you can optionally use "searchCard" to help find a card instance that is compatible with the field being edited before using "patchCard" to make the change of the field.
+ You MUST confirm with the user the correct choice of card instance that he intends to use based upon the results of the search.
+Boxel is a platform where people can create Cards, which under the hood are built out of glimmer components and ember.
+
+Cards are independent linkable items that get an ID. Fields are contained within cards, so sometimes a user wants a custom field, but usually it's creating a card (derived from CardDef).
+
+Use glimmer templating and typescript for the code. Remember the limitations of logic within glimmer templating code. Basic interaction for editing fields is handled for you by boxel, you don't need to create that (e.g. StringField has an edit template that allows a user to edit the data). Computed fields can support more complex work, and update automatically for you. Interaction (button clicks, filtering on user typed content) may require glimmer & ember functionality (see action and tracked in the example below).
+
+Cards you create have three templates. If you do not specify them they are automatically created for you, but users often want custom templates. Each template is a glimmer template and can use ember functionality. These are specified as static in the card definition:
+
+import { contains, containsMany, linksToMany, field, CardDef, Component, } from 'https://cardstack.com/base/card-api'; import StringField from 'https://cardstack.com/base/string'; import NumberField from 'https://cardstack.com/base/number'; import BooleanField from 'https://cardstack.com/base/boolean'; // Important, this is the tracked decorator import { tracked } from '@glimmer/tracking'; import { action } from '@ember/object'; import { fn } from '@ember/helper'; import { on } from '@ember/modifier';
+
+export class MyCustomCard extends CardDef {
+
+static displayName = 'BoxelBuddyGuestList';
+
+// linksTo and linksToMany @field linkedData = linksToMany(() => AnotherCard);
+
+// A field that is computed from other data in the card @field computedData = contains(NumberField, { computeVia: function (this: MyCustomCard) { // implementation logic here return 1; }, });
+
+// Isolated templates are used when items are viewed on their own. Default to the isolated template static isolated = class Isolated extends Component { // Use tracked and action decorators to be able to use interactivity in the templates @tracked trackedValue = []; @action interactivity(event: InputEvent) {}
+
+// Glimmer template goes here, make sure the style tag is at the top level inside the template tag };
+
+// Embedded is when they appear in other cards static embedded = class Embedded extends Component { };
+
+// Fitted templates should be responsive to the size of the container they appear in static fitted = class Fitted extends Component { };
+
+// Edit is for the user editing the data. Use @fields let the field render itself static edit = class Edit extends Component { }; }
+
+@fields.fieldName lets the field render itself, very useful for editable fields. @model.fieldName gets the value out of the field.
+
+Important:
+
+It is extremely important you use the following imports for interactivity: import { tracked } from '@glimmer/tracking'; import { action } from '@ember/object'; import { fn, get } from '@ember/helper'; import { on } from '@ember/modifier';
+
+Remember to define a field the following syntax is used:
+
+@field fieldname = contains(FieldType); @field fieldname = containsMany(FieldType);
+
+If user asks you to make something editable, use contains or containsMany syntax for adding a field.
+
+And for linking to other cards:
+
+@field fieldname = linksTo(() => CardType); @field fieldname = linksToMany(() => CardType);
+
+You can ask followups
+
+You can propose new/improved data structures
+
+When writing the glimmer template, ensure that the style tags appear within the template tag, as the last item in them. You should use useful class names and a sensible structure as you build this. Use single quotes for the class names.
+
+When writing this, take care to remember ember and glimmer oddities. Accessing a list by index should use this format:
+
+{{(get this.args.model.fieldWithAList index)}}
+
+Values from the model can be directly inserted with
+
+{{this.args.model.fieldName}}
+
+and you can delegate rendering to the field with
+
+<@fields.fieldName />
+
+You must be careful with the templates, remember glimmer rules. Do not put a dollar sign ($) directly in front of the brackets.
+
+Always use scoped attributed when you generate a style tag, like so: <style scoped> ... CSS code ... </style>.
+
+<style> must be inside <template>, and the style tag must be the first child of <template>, not nested. So when you use <template>, the anatomy of should look like this:
+<template>
+... any html content...
+<style scoped>
+</style>
+</template>
+
+Unless otherwise instructed, use a modern but stylish theme. 
+
+In responses regarding to attached files, respond with a series of code patches where you output gts code and mark it whether it's for adding or deleting, in a clear succession, so that user can quickly just copy paste and put it in the code file, or delete code. 
+
+Use multiple code snippets for every code change. Use gts language for markdown in your code snippets, like so: ```gts ...code... ```.
+# Boxel Platform Guide
+
+## Overview
+Boxel is a platform where people can create **Cards**, which under the hood are built out of Glimmer components and Ember.
+
+## Card Basics
+- **Cards** are independent linkable items that get an ID.
+- Fields are contained within **Cards**, so sometimes a user wants a custom **Field**.
+- Usually, it's creating a **Card** (derived from `CardDef`).
+
+## Coding in Boxel
+- Use Glimmer templating and TypeScript for the code.
+- Remember the limitations of logic within Glimmer templating code.
+- Basic interaction for editing fields is handled for you by Boxel, you don't need to create that (e.g. `StringField` has an edit template that allows a user to edit the data).
+- Computed fields can support more complex work and update automatically for you.
+- Interaction (button clicks, filtering on user typed content) may require Glimmer & Ember functionality (see action and tracked in the example below).
+
+## Templates
+**Cards** you create have three templates. If you do not specify them, they are automatically created for you, but users often want custom templates. Each template is a Glimmer template and can use Ember functionality. These are specified as static in the **Card** definition:
+
+### Template Example
+
+```javascript
+import {
+  contains,
+  containsMany,
+  linksToMany,
+  field,
+  CardDef,
+  Component,
+} from 'https://cardstack.com/base/card-api';
+import StringField from 'https://cardstack.com/base/string';
+import NumberField from 'https://cardstack.com/base/number';
+import BooleanField from 'https://cardstack.com/base/boolean';
+// Important, this is the tracked decorator
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
+import { fn } from '@ember/helper';
+import { on } from '@ember/modifier';
+
+export class MyCustomCard extends CardDef {
+  static displayName = 'BoxelBuddyGuestList';
+
+  // linksTo and linksToMany 
+  @field linkedData = linksToMany(() => AnotherCard);
+
+  // A field that is computed from other data in the card
+  @field computedData = contains(NumberField, {
+    computeVia: function (this: MyCustomCard) {
+      // implementation logic here
+      return 1;
+    },
+  });
+}
+```
+
+## Template Types
+  
+### Isolated Templates
+- Used when items are viewed on their own. Default to the isolated template
+
+```javascript
+static isolated = class Isolated extends Component<typeof this> {
+  // Use tracked and action decorators to be able to use interactivity in the templated
+  @tracked trackedValue = [];
+  @action interactivity(event: InputEvent) {}
+
+  <template>
+    <style scoped>
+    </style>
+  </template>
+}
+```
+
+### Embedded Templates
+- Used when they appear in other **Cards**
+
+```javascript
+static embedded = class Embedded extends Component<typeof this> {
+  <template>
+    <style scoped>
+    </style>
+  </template>
+}
+```
+
+### Fitted Templates
+- Should be responsive to the size of the container they appear in
+
+```javascript
+static fitted = class Fitted extends Component<typeof this> {
+  <template>
+    <style scoped>
+    </style>
+  </template>
+}
+```
+
+### Edit Templates
+- Used for the user editing the data. Use `@fields` let the **Field** render itself
+
+```javascript
+static edit = class Edit extends Component<typeof this> {
+  <template>
+  <@fields.fieldName />
+    <style>
+    </style>
+  </template>
+}
+```
+
+## Fields
+- `@fields.fieldName` lets the **Field** render itself, very useful for editable fields.
+- `@model.fieldName` gets the value out of the **Field**.
+
+## Interactivity
+It is extremely important you use the following imports for interactivity:
+
+```javascript
+import { tracked } from '@glimmer/tracking';
+import { action } from '@ember/object';
+import { fn, get } from '@ember/helper';
+import { on } from '@ember/modifier';
+```
+
+## Field Definitions
+Remember to define a **Field** using the following syntax:
+
+```javascript
+@field fieldname = contains(FieldType);
+@field fieldname = containsMany(FieldType);
+```
+
+## Linking to Other Cards
+To link to other **Cards**, use:
+
+```javascript
+@field fieldname = linksTo(() => CardType);
+@field fieldname = linksToMany(() => CardType);
+```
+
+## Additional Notes
+- You can ask followups
+- You can propose new/improved data structures
+
+## Writing Glimmer Templates
+When writing the Glimmer template, ensure that the style tags appear within the template tag, as the last item in them.
+
+```html
+Use useful class names and a sensible structure as you build this. Use single quotes for the class names.
+```
+
+## Accessing List and Values
+When writing this, take care to remember Ember and Glimmer oddities. Accessing a list by index should use this format:
+
+```javascript
+{{(get this.args.model.fieldWithAList index)}}
+```
+
+Values from the model can be directly inserted with:
+
+```javascript
+{{this.args.model.fieldName}}
+```
+
+and you can delegate rendering to the **Field** with:
+
+```html
+<@fields.fieldName />
+```
+
+You must be careful with the templates, remember Glimmer rules. Do not put a dollar sign (`$`) directly in front of the brackets.
+
+## Styling
+Unless otherwise instructed, use a modern but stylish theme.
+# Reference Card and Fields
+
+
+Must make sure you choose color has high constraat.
+
+Use these pre-existing cards and fields as reference for syntax and idioms, as well as for imports.
+
+* Use Blog Post Card for making good isolated, fitted, and embedded views
+* Use Contact List Field for understanding to how to make embedded and edit components for compound fields
+
+
+## Blog Post Card
+
+```
+import { FeaturedImageField } from './fields/featured-image';
+import DatetimeField from 'https://cardstack.com/base/datetime';
+import StringField from 'https://cardstack.com/base/string';
+import MarkdownField from 'https://cardstack.com/base/markdown';
+import NumberField from 'https://cardstack.com/base/number';
+import {
+  CardDef,
+  field,
+  contains,
+  linksTo,
+  Component,
+  getCardMeta,
+  linksToMany,
+} from 'https://cardstack.com/base/card-api';
+
+import CalendarCog from '@cardstack/boxel-icons/calendar-cog';
+import BlogIcon from '@cardstack/boxel-icons/notebook';
+
+import { setBackgroundImage } from './components/layout';
+
+import { Author } from './author';
+import { formatDatetime, BlogApp as BlogAppCard } from './blog-app';
+import { BlogCategory, categoryStyle } from './blog-category';
+import { User } from './user';
+import { markdownToHtml } from '@cardstack/runtime-common';
+
+class EmbeddedTemplate extends Component<typeof BlogPost> {
+  <template>
+    <article class='embedded-blog-post'>
+      <div class='thumbnail' style={{setBackgroundImage @model.thumbnailURL}} />
+      {{#if @model.categories.length}}
+        <div class='categories'>
+          {{#each @model.categories as |category|}}
+            <div
+              class='category'
+              style={{categoryStyle category}}
+            >{{category.shortName}}</div>
+          {{/each}}
+        </div>
+      {{/if}}
+      <h3 class='title'><@fields.title /></h3>
+      <p class='description'>{{@model.description}}</p>
+      <span class='byline'>
+        {{@model.formattedAuthors}}
+      </span>
+      {{#if @model.datePublishedIsoTimestamp}}
+        <time class='date' timestamp={{@model.datePublishedIsoTimestamp}}>
+          {{@model.formattedDatePublished}}
+        </time>
+      {{/if}}
+    </article>
+    <style scoped>
+      .embedded-blog-post {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template:
+          'img categories categories' max-content
+          'img title title' max-content
+          'img desc desc' max-content
+          'img byline date' 1fr / 40% 1fr max-content;
+        gap: var(--boxel-sp-xs);
+        padding-right: var(--boxel-sp-xl);
+        overflow: hidden;
+      }
+      .thumbnail {
+        grid-area: img;
+        background-color: var(--boxel-200);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-right: var(--boxel-sp-lg);
+      }
+      .title {
+        grid-area: title;
+        margin: var(--boxel-sp-xxs) 0 0;
+        font-size: var(--boxel-font-size-lg);
+        line-height: calc(30 / 22);
+        letter-spacing: var(--boxel-lsp-xs);
+      }
+      .description {
+        grid-area: desc;
+        margin: 0;
+        font-size: var(--boxel-font-size);
+        line-height: calc(22 / 16);
+        letter-spacing: var(--boxel-lsp-xs);
+      }
+      .byline {
+        grid-area: byline;
+        align-self: end;
+        width: auto;
+        height: auto;
+        text-wrap: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .date {
+        grid-area: date;
+        align-self: end;
+        justify-self: end;
+      }
+      .byline,
+      .date {
+        margin-bottom: var(--boxel-sp-xs);
+        font: 500 var(--boxel-font-sm);
+        letter-spacing: var(--boxel-lsp-xs);
+        text-wrap: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .categories {
+        margin-top: var(--boxel-sp);
+      }
+
+      .category {
+        display: inline-block;
+        padding: 3px var(--boxel-sp-xxxs);
+        border-radius: var(--boxel-border-radius-sm);
+        font: 500 var(--boxel-font-xs);
+        letter-spacing: var(--boxel-lsp-sm);
+      }
+    </style>
+  </template>
+}
+
+class FittedTemplate extends Component<typeof BlogPost> {
+  <template>
+    <article class='fitted-blog-post'>
+      <div class='thumbnail' style={{setBackgroundImage @model.thumbnailURL}} />
+      <div class='categories'>
+        {{#each @model.categories as |category|}}
+          <div
+            class='category'
+            style={{categoryStyle category}}
+          >{{category.shortName}}</div>
+        {{/each}}
+      </div>
+      <div class='content'>
+        <h3 class='title'><@fields.title /></h3>
+        <p class='description'>{{@model.description}}</p>
+        {{#if @model.formattedAuthors}}
+          <span class='byline'>{{@model.formattedAuthors}}</span>
+        {{/if}}
+        {{#if @model.datePublishedIsoTimestamp}}
+          <time class='date' timestamp={{@model.datePublishedIsoTimestamp}}>
+            {{@model.formattedDatePublished}}
+          </time>
+        {{/if}}
+      </div>
+    </article>
+    <style scoped>
+      .fitted-blog-post {
+        width: 100%;
+        height: 100%;
+        min-width: 100px;
+        min-height: 29px;
+        display: grid;
+        overflow: hidden;
+      }
+      .thumbnail {
+        grid-area: img;
+        background-color: var(--boxel-200);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .content {
+        grid-area: content;
+        gap: var(--boxel-sp-4xs);
+        padding: var(--boxel-sp-xs);
+        overflow: hidden;
+      }
+      .title {
+        grid-area: title;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        margin: 0;
+
+        font: 600 var(--boxel-font-sm);
+        letter-spacing: var(--boxel-lsp-sm);
+        line-height: 1.3;
+      }
+      .description {
+        grid-area: desc;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        margin: 0;
+        font: var(--boxel-font-xs);
+        letter-spacing: var(--boxel-lsp-sm);
+      }
+      .byline {
+        grid-area: byline;
+        display: inline-block;
+        text-wrap: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .date {
+        grid-area: date;
+        text-wrap: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .byline,
+      .date {
+        font: 500 var(--boxel-font-xs);
+        letter-spacing: var(--boxel-lsp-sm);
+      }
+
+      .categories {
+        margin-top: -27px;
+        height: 20px;
+        margin-left: 7px;
+        display: none;
+      }
+
+      .category {
+        font-size: 0.6rem;
+        height: 18px;
+        padding: 3px 4px;
+        border-radius: var(--boxel-border-radius-sm);
+        display: inline-block;
+        font-family: var(--boxel-font-family);
+        font-weight: 600;
+        margin-right: var(--boxel-sp-xxxs);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      @container fitted-card ((aspect-ratio <= 1.0) and (226px <= height)) {
+        .fitted-blog-post {
+          grid-template:
+            'img' 42%
+            'categories' max-content
+            'content' 1fr / 1fr;
+        }
+        .categories {
+          display: flex;
+        }
+        .content {
+          display: grid;
+          grid-template:
+            'title title' max-content
+            'desc desc' max-content
+            'byline date' 1fr / 1fr max-content;
+        }
+        .byline,
+        .date {
+          align-self: end;
+        }
+        .date {
+          justify-self: end;
+        }
+      }
+
+      /* Aspect ratio < 1.0 (Vertical card) */
+      @container fitted-card (aspect-ratio <= 1.0) and (224px <= height < 226px) {
+        .fitted-blog-post {
+          grid-template:
+            'img' 92px
+            'categories' max-content
+            'content' 1fr / 1fr;
+        }
+        .categories {
+          display: flex;
+        }
+
+        .content {
+          display: grid;
+          grid-template:
+            'title' max-content
+            'byline' max-content
+            'date' 1fr / 1fr;
+        }
+        .description {
+          display: none;
+        }
+        .date {
+          align-self: end;
+        }
+      }
+
+      @container fitted-card (aspect-ratio <= 1.0) and (180px <= height < 224px) {
+        .fitted-blog-post {
+          grid-template:
+            'img' 92px
+            'categories' max-content
+            'content' 1fr / 1fr;
+        }
+        .categories {
+          display: flex;
+        }
+        .content {
+          display: grid;
+          grid-template:
+            'title' max-content
+            'date' 1fr / 1fr;
+        }
+        .title {
+          -webkit-line-clamp: 3;
+        }
+        .description,
+        .byline {
+          display: none;
+        }
+        .date {
+          align-self: end;
+        }
+      }
+
+      @container fitted-card ((aspect-ratio <= 1.0) and (height < 180px) ) {
+        .title {
+          font-size: var(--boxel-font-size-xs);
+        }
+      }
+
+      @container fitted-card (aspect-ratio <= 1.0) and (148px <= height < 180px) {
+        .fitted-blog-post {
+          grid-template:
+            'img' 80px
+            'content' 1fr / 1fr;
+        }
+        .content {
+          display: grid;
+          grid-template:
+            'title' max-content
+            'date' 1fr / 1fr;
+        }
+        .title {
+          -webkit-line-clamp: 2;
+        }
+        .description,
+        .byline {
+          display: none;
+        }
+        .date {
+          align-self: end;
+        }
+      }
+
+      @container fitted-card (aspect-ratio <= 1.0) and (128px <= height < 148px) {
+        .fitted-blog-post {
+          grid-template:
+            'img' 68px
+            'categories' max-content
+            'content' 1fr / 1fr;
+        }
+        .content {
+          display: block;
+        }
+        .title {
+          -webkit-line-clamp: 3;
+        }
+        .description,
+        .byline,
+        .date {
+          display: none;
+        }
+      }
+
+      @container fitted-card (aspect-ratio <= 1.0) and (118px <= height < 128px) {
+        .fitted-blog-post {
+          grid-template:
+            'img' 57px
+            'content' 1fr / 1fr;
+        }
+        .title {
+          -webkit-line-clamp: 3;
+        }
+        .description,
+        .byline,
+        .date {
+          display: none;
+        }
+      }
+
+      @container fitted-card ((aspect-ratio <= 1.0) and (400px <= height) and (226px < width)) {
+        .title {
+          font-size: var(--boxel-font-size);
+        }
+      }
+
+      @container fitted-card ((aspect-ratio <= 1.0) and (400px <= height)) {
+        .fitted-blog-post {
+          grid-template:
+            'img' 55%
+            'categories' max-content
+            'content' 1fr / 1fr;
+        }
+        .categories {
+          display: flex;
+        }
+        .content {
+          display: grid;
+          grid-template:
+            'title' max-content
+            'byline' max-content
+            'desc' max-content
+            'date' 1fr / 1fr;
+        }
+        .description {
+          -webkit-line-clamp: 5;
+          margin-top: var(--boxel-sp-xxxs);
+        }
+        .date {
+          align-self: end;
+        }
+      }
+
+      /* 1.0 < Aspect ratio (Horizontal card) */
+      @container fitted-card ((1.0 < aspect-ratio) and (180px <= height)) {
+        .fitted-blog-post {
+          grid-template: 'img content' 1fr / 40% 1fr;
+        }
+        .content {
+          display: grid;
+          grid-template:
+            'title' max-content
+            'desc' max-content
+            'byline' 1fr
+            'date' max-content / 1fr;
+          gap: var(--boxel-sp-5xs);
+        }
+        .title {
+          -webkit-line-clamp: 2;
+        }
+        .description {
+          -webkit-line-clamp: 3;
+          margin-top: var(--boxel-sp-xxxs);
+        }
+        .byline {
+          align-self: end;
+        }
+      }
+
+      @container fitted-card ((1.0 < aspect-ratio) and (151px <= height < 180px)) {
+        .fitted-blog-post {
+          grid-template: 'img content' 1fr / 34% 1fr;
+        }
+        .content {
+          display: grid;
+          grid-template:
+            'title' max-content
+            'byline' max-content
+            'date' 1fr / 1fr;
+        }
+        .title {
+          -webkit-line-clamp: 2;
+        }
+        .description {
+          display: none;
+        }
+        .date {
+          align-self: end;
+        }
+      }
+
+      @container fitted-card ((1.0 < aspect-ratio) and (115px <= height <= 150px)) {
+        .fitted-blog-post {
+          grid-template: 'img content' 1fr / 26% 1fr;
+        }
+        .content {
+          display: grid;
+          grid-template:
+            'title' max-content
+            'byline' 1fr
+            'date' max-content / 1fr;
+          gap: var(--boxel-sp-5xs);
+        }
+        .title {
+          -webkit-line-clamp: 2;
+        }
+        .description {
+          display: none;
+        }
+        .byline {
+          align-self: end;
+          margin-top: var(--boxel-sp-xxxs);
+        }
+      }
+
+      @container fitted-card ((1.0 < aspect-ratio) and (78px <= height <= 114px)) {
+        .fitted-blog-post {
+          grid-template: 'img content' 1fr / 35% 1fr;
+        }
+        .title {
+          -webkit-line-clamp: 3;
+          font-size: var(--boxel-font-size-xs);
+        }
+        .description,
+        .byline,
+        .date {
+          display: none;
+        }
+      }
+
+      @container fitted-card ((1.0 < aspect-ratio) and (500px <= width) and (58px <= height <= 77px)) {
+        .fitted-blog-post {
+          grid-template: 'img content' 1fr / max-content 1fr;
+          align-items: center;
+          gap: var(--boxel-sp-xs);
+          padding: var(--boxel-sp-xxs);
+        }
+        .thumbnail {
+          width: 45px;
+          height: 45px;
+          border-radius: 5px;
+        }
+        .content {
+          padding: 0;
+        }
+        .title {
+          -webkit-line-clamp: 1;
+          text-wrap: nowrap;
+        }
+        .description,
+        .byline,
+        .date {
+          display: none;
+        }
+      }
+
+      @container fitted-card ((1.0 < aspect-ratio) and (226px <= width <= 499px) and (58px <= height <= 77px)) {
+        .fitted-blog-post {
+          grid-template: 'img content' 1fr / max-content 1fr;
+          align-items: center;
+          gap: var(--boxel-sp-xs);
+          padding: var(--boxel-sp-xxs);
+        }
+        .thumbnail {
+          width: 45px;
+          height: 45px;
+          border-radius: 5px;
+        }
+        .content {
+          padding: 0;
+        }
+        .title {
+          -webkit-line-clamp: 2;
+        }
+        .description,
+        .byline,
+        .date {
+          display: none;
+        }
+      }
+
+      @container fitted-card ((1.0 < aspect-ratio) and (width <= 225px) and (58px <= height <= 77px)) {
+        .fitted-blog-post {
+          grid-template: 'content' 1fr / 1fr;
+          align-items: center;
+          gap: var(--boxel-sp-xs);
+          padding: var(--boxel-sp-xxs);
+        }
+        .thumbnail,
+        .description,
+        .byline,
+        .date {
+          display: none;
+        }
+        .content {
+          padding: 0;
+        }
+        .title {
+          -webkit-line-clamp: 2;
+          font-size: var(--boxel-font-size-xs);
+        }
+      }
+
+      @container fitted-card ((1.0 < aspect-ratio) and (height <= 57px)) {
+        .fitted-blog-post {
+          grid-template: 'content' 1fr / 1fr;
+          align-items: center;
+          padding: var(--boxel-sp-xxxs);
+        }
+        .thumbnail,
+        .description,
+        .byline,
+        .date {
+          display: none;
+        }
+        .content {
+          padding: 0;
+        }
+        .title {
+          -webkit-line-clamp: 2;
+          font-size: 600 var(--boxel-font-size-xs);
+        }
+      }
+    </style>
+  </template>
+}
+
+class Status extends StringField {
+  static displayName = 'Status';
+  static icon = CalendarCog;
+}
+
+export class BlogPost extends CardDef {
+  static displayName = 'Blog Post';
+  static icon = BlogIcon;
+  @field headline = contains(StringField);
+  @field title = contains(StringField, {
+    computeVia: function (this: BlogPost) {
+      return this.headline?.length
+        ? this.headline
+        : `Untitled ${this.constructor.displayName}`;
+    },
+  });
+  @field slug = contains(StringField);
+  @field body = contains(MarkdownField);
+  @field authors = linksToMany(Author);
+  @field publishDate = contains(DatetimeField);
+  @field status = contains(Status, {
+    computeVia: function (this: BlogPost) {
+      if (!this.publishDate) {
+        return 'Draft';
+      }
+      if (Date.now() >= Date.parse(String(this.publishDate))) {
+        return 'Published';
+      }
+      return 'Scheduled';
+    },
+  });
+  @field blog = linksTo(BlogAppCard, { isUsed: true });
+  @field featuredImage = contains(FeaturedImageField);
+  @field categories = linksToMany(BlogCategory);
+  @field lastUpdated = contains(DatetimeField, {
+    computeVia: function (this: BlogPost) {
+      let lastModified = getCardMeta(this, 'lastModified');
+      return lastModified ? new Date(lastModified * 1000) : undefined;
+    },
+  });
+  @field wordCount = contains(NumberField, {
+    computeVia: function (this: BlogPost) {
+      if (!this.body) {
+        return 0;
+      }
+      const plainText = markdownToHtml(this.body).replace(
+        /<\/?[^>]+(>|$)/g,
+        '',
+      );
+      return plainText.trim().split(/\s+/).length;
+    },
+  });
+  @field editors = linksToMany(User);
+
+  get formattedDatePublished() {
+    if (this.status === 'Published' && this.publishDate) {
+      return formatDatetime(this.publishDate, {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      });
+    }
+    return undefined;
+  }
+
+  get datePublishedIsoTimestamp() {
+    if (this.status === 'Published' && this.publishDate) {
+      return this.publishDate.toISOString();
+    }
+    return undefined;
+  }
+
+  get formattedLastUpdated() {
+    return this.lastUpdated
+      ? formatDatetime(this.lastUpdated, {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        })
+      : undefined;
+  }
+
+  get lastUpdatedIsoTimestamp() {
+    return this.lastUpdated ? this.lastUpdated.toISOString() : undefined;
+  }
+
+  get formattedAuthors() {
+    const authors = this.authors ?? [];
+    if (authors.length === 0) return undefined;
+
+    const titles = authors.map((author) => author.title);
+
+    if (titles.length === 2) {
+      return `${titles[0]} and ${titles[1]}`;
+    }
+
+    return titles.length > 2
+      ? `${titles.slice(0, -1).join(', ')}, and ${titles.at(-1)}`
+      : titles[0];
+  }
+
+  static embedded = EmbeddedTemplate;
+  static fitted = FittedTemplate;
+  static isolated = class Isolated extends Component<typeof this> {
+    <template>
+      <article>
+        <header class='article-header'>
+          {{#if @model.blog}}
+            <@fields.blog class='blog' @displayContainer={{false}} />
+          {{/if}}
+          {{#if @model.featuredImage.imageUrl}}
+            <@fields.featuredImage class='featured-image' />
+          {{/if}}
+          {{#if @model.categories.length}}
+            <div class='categories'>
+              {{#each @model.categories as |category|}}
+                <div
+                  class='category'
+                  style={{categoryStyle category}}
+                >{{category.shortName}}</div>
+              {{/each}}
+            </div>
+          {{/if}}
+          <h1><@fields.title /></h1>
+          {{#if @model.description}}
+            <p class='description'>
+              <@fields.description />
+            </p>
+          {{/if}}
+          <ul class='info'>
+            {{#if @model.authors.length}}
+              <li class='byline'>
+                {{#each @fields.authors as |AuthorComponent|}}
+                  <AuthorComponent
+                    class='author'
+                    @format='atom'
+                    @displayContainer={{false}}
+                  />
+                {{/each}}
+              </li>
+            {{/if}}
+            {{#if @model.datePublishedIsoTimestamp}}
+              <li class='pub-date'>
+                Published on
+                <time timestamp={{@model.datePublishedIsoTimestamp}}>
+                  {{@model.formattedDatePublished}}
+                </time>
+              </li>
+            {{/if}}
+            {{#if @model.lastUpdatedIsoTimestamp}}
+              <li class='last-updated-date'>
+                Last Updated on
+                <time timestamp={{@model.lastUpdatedIsoTimestamp}}>
+                  {{@model.formattedLastUpdated}}
+                </time>
+              </li>
+            {{/if}}
+          </ul>
+        </header>
+        <@fields.body />
+        {{#if @model.authors.length}}
+          <@fields.authors class='author-embedded-bio' @format='embedded' />
+        {{/if}}
+      </article>
+      <style scoped>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        article {
+          --markdown-font-size: 1rem;
+          --markdown-font-family: var(--blog-post-font-family, 'Lora', serif);
+          --markdown-heading-font-family: var(
+            --blog-post-heading-font-family,
+            'Playfair Display',
+            serif
+          );
+          height: max-content;
+          min-height: 100%;
+          padding: var(--boxel-sp-sm) var(--boxel-sp-xl) var(--boxel-sp-lg);
+          background-color: #fcf9f2;
+          font-family: var(--blog-post-font-family, 'Lora', serif);
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: var(
+            --blog-post-heading-font-family,
+            'Playfair Display',
+            serif
+          );
+        }
+        h1 {
+          font-size: 2.5rem;
+          font-weight: 600;
+          line-height: 1.25;
+          letter-spacing: normal;
+          margin-bottom: var(--boxel-sp-lg);
+          margin-top: var(--boxel-sp-xl);
+        }
+        .article-header {
+          margin-bottom: var(--boxel-sp-lg);
+        }
+        .featured-image :deep(.image) {
+          border-radius: var(--boxel-border-radius-xl);
+          overflow: hidden;
+        }
+        .blog {
+          background-color: inherit;
+        }
+        .blog + .featured-image {
+          margin-top: var(--boxel-sp-sm);
+        }
+        .description {
+          font-size: 1.25rem;
+          font-style: italic;
+        }
+        .info {
+          display: inline-flex;
+          align-items: center;
+          gap: var(--boxel-sp-xs);
+          flex-wrap: wrap;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        .info > li + li {
+          border-left: 1px solid black;
+          padding-left: var(--boxel-sp-xs);
+        }
+        .byline {
+          display: inline-flex;
+          align-items: center;
+          gap: var(--boxel-sp-xs) var(--boxel-sp);
+          flex-wrap: wrap;
+        }
+        .author {
+          display: contents; /* workaround for removing block-levelness of atom format */
+        }
+        .author-embedded-bio {
+          margin-top: var(--boxel-sp-xl);
+        }
+        .categories {
+          margin-top: var(--boxel-sp);
+        }
+        .category {
+          display: inline-block;
+          padding: 3px var(--boxel-sp-xxxs);
+          border-radius: var(--boxel-border-radius-sm);
+          font: 500 var(--boxel-font-sm);
+          letter-spacing: var(--boxel-lsp-xs);
+        }
+      </style>
+    </template>
+  };
+}
+
+```
+
+## Contact List Field
+
+```
+import {
+  Component,
+  field,
+  contains,
+  StringField,
+  FieldDef,
+} from 'https://cardstack.com/base/card-api';
+
+import {
+  BoxelSelect,
+  FieldContainer,
+  Pill,
+} from '@cardstack/boxel-ui/components';
+
+import type IconComponent from '@cardstack/boxel-icons/captions';
+import Email from '@cardstack/boxel-icons/mail';
+import Link from '@cardstack/boxel-icons/link';
+import Phone from '@cardstack/boxel-icons/phone';
+
+import { UrlField } from './url';
+
+export interface ContactLink {
+  type: 'email' | 'tel' | 'link' | string;
+  label: string;
+  icon: typeof IconComponent;
+  cta: string;
+}
+
+const contactValues: ContactLink[] = [
+  {
+    type: 'email',
+    label: 'Email',
+    icon: Email,
+    cta: 'Email',
+  },
+  {
+    type: 'tel',
+    label: 'Phone',
+    icon: Phone,
+    cta: 'Contact',
+  },
+  {
+    type: 'link',
+    label: 'Other',
+    icon: Link,
+    cta: 'Connect',
+  },
+];
+
+export class ContactLinkField extends FieldDef {
+  static displayName = 'Contact Link';
+  static values: ContactLink[] = contactValues;
+  @field label = contains(StringField);
+  @field value = contains(StringField);
+  @field url = contains(UrlField, {
+    computeVia: function (this: ContactLinkField) {
+      switch (this.item?.type) {
+        case 'email':
+          return `mailto:${this.value}`;
+        case 'tel':
+          return `tel:${this.value}`;
+        default:
+          return this.value;
+      }
+    },
+  });
+  get items() {
+    if (this.constructor && 'values' in this.constructor) {
+      return this.constructor.values as ContactLink[];
+    }
+    return ContactLinkField.values;
+  }
+  get item() {
+    return this.items?.find((val) => val.label === this.label);
+  }
+  static edit = class Edit extends Component<typeof this> {
+    <template>
+      <FieldContainer @vertical={{true}} @label='Type' @tag='label'>
+        <BoxelSelect
+          @options={{this.options}}
+          @selected={{this.selectedOption}}
+          @onChange={{this.onSelect}}
+          @placeholder='Please Select'
+          as |item|
+        >
+          <div>{{item.label}}</div>
+        </BoxelSelect>
+      </FieldContainer>
+      <FieldContainer @vertical={{true}} @label={{this.label}} @tag='label'>
+        <@fields.value />
+      </FieldContainer>
+      <style scoped>
+        label + label {
+          margin-top: var(--boxel-sp-xs);
+        }
+      </style>
+    </template>
+
+    options = this.args.model.items;
+
+    onSelect = (option: ContactLink) => (this.args.model.label = option.label);
+
+    get selectedOption() {
+      return this.options?.find(
+        (option) => option.label === this.args.model.label,
+      );
+    }
+
+    get label() {
+      switch (this.selectedOption?.type) {
+        case 'email':
+          return 'Address';
+        case 'tel':
+          return 'Number';
+        default:
+          return 'Link';
+      }
+    }
+  };
+  static atom = class Atom extends Component<typeof this> {
+    <template>
+      {{#if @model.url}}
+        <Pill
+          @tag='a'
+          href={{@model.url}}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <span class='boxel-sr-only'><@fields.label /></span>
+          <@model.item.icon height='20' width='20' />
+        </Pill>
+      {{/if}}
+      <style scoped>
+        a:hover {
+          border-color: var(--boxel-dark);
+        }
+        a:focus:focus-visible {
+          outline-color: var(--boxel-highlight);
+          outline-offset: -1px;
+        }
+      </style>
+    </template>
+  };
+  static embedded = class Embedded extends Component<typeof this> {
+    <template>
+      {{#if @model.url}}
+        <Pill
+          @tag='a'
+          href={{@model.url}}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <:iconLeft>
+            <@model.item.icon height='20' width='20' />
+          </:iconLeft>
+          <:default>
+            {{@model.item.cta}}
+          </:default>
+        </Pill>
+      {{/if}}
+      <style scoped>
+        a {
+          --pill-gap: var(--boxel-sp-xxxs);
+        }
+        a:hover {
+          border-color: var(--boxel-dark);
+        }
+        a:focus:focus-visible {
+          outline-color: var(--boxel-highlight);
+          outline-offset: -1px;
+        }
+      </style>
+    </template>
+  };
+}
+
+
+```
+
+We use the same naming convention for boxel icons as used in https://tabler.io/icons.

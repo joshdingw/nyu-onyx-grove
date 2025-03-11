@@ -5,7 +5,8 @@ import {
   contains,
   containsMany,
   linksTo,
-  linksToMany
+  linksToMany,
+  getCard
 } from 'https://cardstack.com/base/card-api';
 import StringField from 'https://cardstack.com/base/string';
 import DateField from 'https://cardstack.com/base/date';
@@ -14,7 +15,7 @@ import { Student } from './student';
 import { StudentCohort } from './student-cohort';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
-import { fn, get } from '@ember/helper';
+import { fn, get, eq } from '@ember/helper';
 import { on } from '@ember/modifier';
 
 export class AssignmentManagement extends CardDef {
@@ -49,13 +50,13 @@ export class AssignmentManagement extends CardDef {
   });
 
   static isolated = class Isolated extends Component<typeof this> {
-    // Tracked properties for filters and search
     @tracked selectedDate = new Date();
     @tracked searchQuery = '';
     @tracked selectedClass = '';
     @tracked selectedTaskType = '';
+    @tracked searchStatus = '';
+    @tracked searchResults = [];
 
-    // Action handlers
     @action
     updateDate(event: Event) {
       const input = event.target as HTMLInputElement;
@@ -80,6 +81,41 @@ export class AssignmentManagement extends CardDef {
       this.selectedTaskType = select.value;
     }
 
+    @action
+    async searchStudent(event: Event) {
+      const input = event.target as HTMLInputElement;
+      this.searchQuery = input.value;
+      
+      try {
+        if (!this.searchQuery.trim()) {
+          this.searchStatus = '';
+          this.searchResults = [];
+          return;
+        }
+
+        // 使用 getCard 获取学生数据
+        try {
+          const studentCard = await getCard('Student', this.searchQuery);
+          if (studentCard) {
+            this.searchResults = [studentCard];
+            this.searchStatus = 'success';
+          } else {
+            this.searchResults = [];
+            this.searchStatus = 'failed';
+          }
+        } catch (error) {
+          console.error('Failed to get student:', error);
+          this.searchResults = [];
+          this.searchStatus = 'error';
+        }
+
+      } catch (error) {
+        console.error('Search error:', error);
+        this.searchStatus = 'error';
+        this.searchResults = [];
+      }
+    }
+
     <template>
       <div class='assignment-management'>
         <!-- Control Bar -->
@@ -94,13 +130,26 @@ export class AssignmentManagement extends CardDef {
           </div>
           
           <div class='control-group'>
-            <input 
-              type='text'
-              placeholder='Search students...'
-              value={{this.searchQuery}}
-              {{on 'input' this.updateSearch}}
-              class='search-input'
-            />
+            <div class='search-container'>
+              <input 
+                type='text'
+                placeholder='Search students...'
+                value={{this.searchQuery}}
+                {{on 'input' this.searchStudent}}
+                class='search-input'
+              />
+              {{#if this.searchStatus}}
+                <div class='search-status {{this.searchStatus}}'>
+                  {{#if (eq this.searchStatus "success")}}
+                    Success ({{this.searchResults.length}} found)
+                  {{else if (eq this.searchStatus "failed")}}
+                    No matches
+                  {{else}}
+                    Error
+                  {{/if}}
+                </div>
+              {{/if}}
+            </div>
           </div>
           
           <div class='control-group'>
@@ -145,7 +194,7 @@ export class AssignmentManagement extends CardDef {
               </tr>
             </thead>
             <tbody>
-              {{#each this.args.model.students as |student|}}
+              {{#each this.searchResults as |student|}}
                 <tr class='student-row'>
                   <td class='student-info'>
                     <div class='avatar'>
@@ -332,6 +381,41 @@ export class AssignmentManagement extends CardDef {
 
         .student-row:hover {
           background: #f8f9fa;
+        }
+
+        .search-container {
+          position: relative;
+          width: 100%;
+        }
+
+        .search-status {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 4px 8px;
+          border-radius: 4px;
+          font-size: 12px;
+          font-weight: 500;
+        }
+
+        .search-status.success {
+          background-color: #4CAF50;
+          color: white;
+        }
+
+        .search-status.failed {
+          background-color: #F44336;
+          color: white;
+        }
+
+        .search-status.error {
+          background-color: #FF9800;
+          color: white;
+        }
+
+        .search-input {
+          padding-right: 80px;
         }
       </style>
     </template>

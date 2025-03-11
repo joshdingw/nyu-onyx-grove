@@ -3,8 +3,8 @@ import StringField from 'https://cardstack.com/base/string';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 import { on } from '@ember/modifier';
-import { fn, eq } from '@ember/helper';
-import { add } from '@ember/helper';
+import { fn } from '@ember/helper';
+import { add, and, bool, eq, gt, lt, not, or } from '@cardstack/boxel-ui/helpers';
 
 export class CourseLearningObjectives extends CardDef {
   static displayName = 'Course Learning Objectives';

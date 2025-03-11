@@ -1,0 +1,27 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Owl",
+      "title": "Professor Owl",
+      "email": "owl@zoo.com",
+      "phone": "999-999-9999",
+      "officeLocation": "tree in the forest",
+      "description": null,
+      "thumbnailURL": "https://mdc.mo.gov/sites/default/files/mo_nature/media/images/2013/11/great_horned_owl_closeup_11-19-13.jpg"
+    },
+    "relationships": {
+      "department": {
+        "links": {
+          "self": "../Department/c007f2c7-b7ab-4598-a3c6-80a2c7629128"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../faculty",
+        "name": "Faculty"
+      }
+    }
+  }
+}

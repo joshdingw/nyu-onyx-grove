@@ -1,0 +1,27 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Forest",
+      "description": "null",
+      "headOfDepartment": "Tiger",
+      "facultyCount": "12",
+      "website": "forest.com",
+      "title": "Forest department",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "facultyMembers.0": {
+        "links": {
+          "self": "../Faculty/31b23fe9-a33b-4990-93d6-725827955d0c"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../department",
+        "name": "Department"
+      }
+    }
+  }
+}

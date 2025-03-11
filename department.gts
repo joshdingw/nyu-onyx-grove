@@ -1,17 +1,22 @@
-import { CardDef, contains, containsMany, field } from 'https://cardstack.com/base/card-api';
+import { CardDef, contains, containsMany, field, linksToMany } from 'https://cardstack.com/base/card-api';
 import { Component } from 'https://cardstack.com/base/card-api';
 import StringField from 'https://cardstack.com/base/string';
-import DateField from 'https://cardstack.com/base/date';
+import { Faculty as FacultyCard} from './faculty';
 
 export class Department extends CardDef {
   static displayName = "Department";
 
   @field name = contains(StringField);
   @field description = contains(StringField);
-  @field foundedDate = contains(DateField);
   @field headOfDepartment = contains(StringField);
   @field facultyCount = contains(StringField);
   @field website = contains(StringField);
+  @field facultyMembers = linksToMany(() => FacultyCard);
+  @field title = contains(StringField, {
+    computeVia: function (this: Department) {
+      return `${this.name} Department`;
+    }
+  });
 
   static isolated = class Isolated extends Component<typeof this> {
     <template>
@@ -45,6 +50,33 @@ export class Department extends CardDef {
           color: #666;
           margin-right: 0.5rem;
         }
+        .faculty-list {
+          margin-top: 2rem;
+          border-top: 2px solid #eee;
+          padding-top: 1rem;
+        }
+        .faculty-list-title {
+          font-size: 1.5rem;
+          color: #2c3e50;
+          margin-bottom: 1rem;
+        }
+        .faculty-item {
+          padding: 0.5rem;
+          margin: 0.5rem 0;
+          border-radius: 4px;
+          transition: background-color 0.2s;
+        }
+        .faculty-item:hover {
+          background-color: #f5f5f5;
+        }
+        .faculty-link {
+          color: #3498db;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        .faculty-link:hover {
+          text-decoration: underline;
+        }
       </style>
 
       <div class='department-card'>
@@ -69,14 +101,14 @@ export class Department extends CardDef {
           </div>
 
           <div class='info-item'>
-            <span class='label'>Founded Date:</span>
-            {{@model.foundedDate}}
-          </div>
-
-          <div class='info-item'>
             <span class='label'>Website:</span>
             <a href={{@model.website}} target="_blank">{{@model.website}}</a>
           </div>
+        </div>
+
+        <div class='faculty-list'>
+          <h2 class='faculty-list-title'>Faculty Members</h2>
+          <@fields.facultyMembers/>
         </div>
       </div>
     </template>
@@ -149,13 +181,13 @@ export class Department extends CardDef {
         </div>
 
         <div class='field-container'>
-          <label class='field-label'>Founded Date</label>
-          <@fields.foundedDate />
+          <label class='field-label'>Website</label>
+          <@fields.website />
         </div>
 
         <div class='field-container'>
-          <label class='field-label'>Website</label>
-          <@fields.website />
+          <label class='field-label'>Faculty Members</label>
+          <@fields.facultyMembers />
         </div>
       </div>
     </template>
