@@ -1,0 +1,30 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Function Graphs",
+      "description": "Draw and analyze quadratic function graphs, including vertex, axis of symmetry, and intercepts. Use graphing software to create accurate visualizations and provide written analysis.",
+      "dueDate": "2024-03-15",
+      "status": "overdue",
+      "completionPercentage": 30,
+      "priority": "high",
+      "category": "Mathematics",
+      "estimatedHours": null,
+      "title": null,
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "assignedTo": {
+        "links": {
+          "self": "../Student/d11c9116-ff8b-43fa-b9d6-4cfa32d97567"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../task",
+        "name": "Task"
+      }
+    }
+  }
+}

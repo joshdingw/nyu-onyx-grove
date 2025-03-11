@@ -1,0 +1,49 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "summary": "An engaging after-school club where students learn cooking skills, explore different cuisines, and develop their culinary abilities.",
+      "name": "Cooking Club",
+      "schoolYear": {
+        "periodLabel": "2024-25"
+      },
+      "active": true,
+      "startTime": "14:00",
+      "endTime": "14:45",
+      "meetingDays": [
+        "Tuesday"
+      ],
+      "title": "Cooking Club",
+      "description": "The Cooking Club introduces students to the culinary arts, teaching fundamental cooking skills, kitchen safety, and nutrition. Members will learn to prepare various dishes, understand different cuisines, and develop an appreciation for food science. The club utilizes the school kitchen facilities, where students will learn measuring, food preparation, cooking techniques, and proper kitchen hygiene.",
+      "thumbnailURL": "https://images.unsplash.com/photo-1556911261-6bd341186b2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    "relationships": {
+      "clubLeader": {
+        "links": {
+          "self": "../Staff/89e6bdd4-90f8-4f1b-9b1a-b2e06fd17a9c"
+        }
+      },
+      "location": {
+        "links": {
+          "self": "../Location/a482be91-0755-4464-aabc-f0d5c6d26094"
+        }
+      },
+      "cohort": {
+        "links": {
+          "self": null
+        }
+      },
+      "staff": {
+        "links": {
+          "self": null
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../club-offering",
+        "name": "Club"
+      }
+    }
+  }
+}

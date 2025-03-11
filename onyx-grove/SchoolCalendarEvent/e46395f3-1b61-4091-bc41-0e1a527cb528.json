@@ -1,0 +1,28 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "date": "2025-10-15T00:00:00.000Z",
+      "name": "Parent-Teacher Conferences - Early Dismissal",
+      "isNoSchool": false,
+      "isEarlyDismissal": true,
+      "isSchoolClosed": false,
+      "title": "Parent-Teacher Conferences",
+      "description": "Students will be dismissed at 12:30 PM. Conferences scheduled from 1:00 PM to 7:00 PM.",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "category": {
+        "links": {
+          "self": "../SchoolCalendarCategory/5f8c6b3b-988a-4d52-99f1-90be7b1a2580"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../school-calendar",
+        "name": "SchoolCalendarEvent"
+      }
+    }
+  }
+}

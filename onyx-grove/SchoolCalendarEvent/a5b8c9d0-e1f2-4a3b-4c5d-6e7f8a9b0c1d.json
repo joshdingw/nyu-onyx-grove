@@ -1,0 +1,28 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "date": "2026-06-10T00:00:00.000Z",
+      "name": "Last Day of School - Early Dismissal",
+      "isNoSchool": false,
+      "isEarlyDismissal": true,
+      "isSchoolClosed": false,
+      "title": "Last Day of School",
+      "description": "Final day of the 2025-26 academic year. Students will be dismissed at 11:30 AM.",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "category": {
+        "links": {
+          "self": "../SchoolCalendarCategory/4161317d-92e5-49c3-9d63-ee39e570896d"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../school-calendar",
+        "name": "SchoolCalendarEvent"
+      }
+    }
+  }
+}

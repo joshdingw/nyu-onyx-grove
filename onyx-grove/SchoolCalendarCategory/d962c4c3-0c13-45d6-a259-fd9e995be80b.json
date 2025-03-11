@@ -1,0 +1,18 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "No School",
+      "color": "#e53935",
+      "title": "No School",
+      "description": "Days when school is not in session",
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../school-calendar",
+        "name": "SchoolCalendarCategory"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Teacher Day",
+      "color": "#27ae60",
+      "title": "Teacher Day",
+      "description": "Professional development and in-service days for teachers",
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../school-calendar",
+        "name": "SchoolCalendarCategory"
+      }
+    }
+  }
+}

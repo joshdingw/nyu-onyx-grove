@@ -1,0 +1,30 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Time Period Field",
+      "readMe": "# Time Period Field\n\nA field for handling various types of time periods including calendar years, academic years, weeks, quarters, sessions, and months.\n\n## Fields\n\n### periodLabel (String)\nThe text representation of the time period. This is the primary input field that determines the period type and date range.\n\n### periodType (String, computed)\nAutomatically determined from the periodLabel. Supported types:\n\n- **Calendar Year**: `2024`\n- **Academic Year**: `2023-2024` or `2023-24`\n- **Week**: `Week 12 2025`, `2025 Wk12`, or `Wk12 2025`\n- **Quarter**: `Q1 2024` or `2024 Q1`\n- **Session**: `Fall 2024`, `Spring 2024`, `Summer 2024`\n- **Month**: Supports various formats like `January 2024`, `Jan 2024`, `Jan. 2024`\n\n### startDate (Date, computed)\nThe beginning date of the period, automatically calculated based on the period type.\n\n### endDate (Date, computed)\nThe ending date of the period, automatically calculated based on the period type.\n\n## Period Type Details\n\n### Calendar Year\n- Start: January 1st\n- End: December 31st\n\n### Academic Year\n- Start: July 1st of first year\n- End: June 30th of second year\n\n### Week\n- Starts on Monday of the specified week\n- Ends on Sunday of the same week\n- Uses ISO week numbering\n\n### Quarter\n- Q1: January 1st - March 31st\n- Q2: April 1st - June 30th\n- Q3: July 1st - September 30th\n- Q4: October 1st - December 31st\n\n### Session\n- Fall: September 1st - December 31st\n- Spring: January 1st - June 30th\n- Summer: July 1st - August 31st\n\n### Month\nSupports various month formats including:\n- Full names (`January`)\n- Three-letter abbreviations (`Jan`)\n- Abbreviated with period (`Jan.`)\n- Special cases like `Sept` for September\n\n## Display\n\nThe field includes an embedded view that shows:\n- A calendar range icon in purple\n- The period label in a clean, bordered container\n- Consistent styling with the Boxel design system\n\n## Usage Example\n\n```typescript\n@field timePeriod = contains(TimePeriod);\n```",
+      "ref": {
+        "name": "TimePeriod",
+        "module": "../time-period"
+      },
+      "specType": "field",
+      "containedExamples": [],
+      "description": "A field for handling various types of time periods including calendar years, academic years, weeks, quarters, sessions, and months.",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "linkedExamples": {
+        "links": {
+          "self": null
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "https://cardstack.com/base/spec",
+        "name": "Spec"
+      }
+    }
+  }
+}

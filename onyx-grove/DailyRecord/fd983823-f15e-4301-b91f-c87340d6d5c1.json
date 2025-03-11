@@ -1,0 +1,24 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "date": "2025-02-24",
+      "workTask": "- [x] Mathematics\n  - [x] Multiplication Tables (1-12)\n  - [x] Word Problems - [x] Reading\n  - [x] Comprehension Exercises\n  - [x] Vocabulary Practice\n- [ ] Homework Assigned\n  - [ ] Math Worksheet\n  - [ ] Reading Log",
+      "description": "Today's activities included practicing multiplication tables and reading comprehension exercises. The student showed good engagement and completed all assigned tasks successfully.",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "student": {
+        "links": {
+          "self": "../Student/b843ea83-65b3-4e9c-9dc6-be1796eece70"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../daily-record",
+        "name": "DailyRecord"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "date": "2024-02-24",
+      "workTask": "# Today's Learning Activities\n\n## 📚 Language Arts\n- [x] **Essay Writing**\n  - [x] Topic: Personal Narrative\n  - [x] Focus: Transitional Phrases\n  - [x] Duration: 45 minutes\n- [x] **Grammar Review**\n  - [x] Complex Sentences\n  - [x] Punctuation Rules\n\n## 🔬 Science\n- [x] **Lab Experiment**\n  - [x] Topic: Chemical Reactions\n  - [x] Safety Protocols Followed\n  - [x] Group Collaboration\n- [x] **Data Recording**\n  - [x] Observations Noted\n  - [x] Results Documented\n\n## 📝 Homework Assigned\n- [ ] **Lab Report**\n  - [ ] Due: Tomorrow\n  - [ ] Include Diagrams\n  - [ ] Show Calculations\n- [ ] **Vocabulary List**\n  - [ ] 10 New Science Terms\n  - [ ] Use in Sentences\n\n---\n*Note: Check (✓) items when completed*",
+      "description": "Student demonstrated strong analytical skills during the science lab experiment and showed improvement in essay structure. Particularly engaged during the hands-on activities. Writing skills continue to develop, with good use of transitional phrases in today's essay.",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "student": {
+        "links": {
+          "self": "../Student/62971424-ceda-4dd7-8cd1-1f764e0125e7"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../daily-record",
+        "name": "DailyRecord"
+      }
+    }
+  }
+}

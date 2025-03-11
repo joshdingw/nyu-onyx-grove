@@ -1,0 +1,80 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "courseName": "Data Structures and Algorithms",
+      "semester": "Spring",
+      "academicYear": "2023-2024",
+      "courseDescription": "This course covers fundamental data structures and algorithms in computer science. Students will learn about various data structures, algorithm design techniques, and their practical applications.",
+      "courseObjectives": [
+        "Master fundamental data structures and their implementations",
+        "Analyze algorithm complexity and performance",
+        "Apply algorithmic problem-solving techniques",
+        "Implement efficient solutions to computational problems",
+        "Understand trade-offs in algorithm and data structure design"
+      ],
+      "weeklyPlans": [
+        {
+          "weekNumber": "1",
+          "topic": "Introduction to Data Structures",
+          "objectives": [
+            "Understand basic data structure concepts",
+            "Learn about array-based implementations",
+            "Analyze time and space complexity"
+          ],
+          "activities": [
+            "Array manipulation exercises",
+            "Complexity analysis workshop",
+            "Basic data structures quiz"
+          ],
+          "title": null,
+          "description": null,
+          "thumbnailURL": null
+        },
+        {
+          "weekNumber": "2",
+          "topic": "Linked Lists and Recursion",
+          "objectives": [
+            "Implement singly and doubly linked lists",
+            "Master recursive problem-solving",
+            "Understand pointer manipulation"
+          ],
+          "activities": [
+            "Linked list implementation",
+            "Recursive algorithms practice",
+            "List manipulation project"
+          ],
+          "title": null,
+          "description": null,
+          "thumbnailURL": null
+        },
+        {
+          "weekNumber": "3",
+          "topic": "Stacks and Queues",
+          "objectives": [
+            "Understand stack and queue ADTs",
+            "Implement stack-based algorithms",
+            "Apply queues in problem-solving"
+          ],
+          "activities": [
+            "Stack implementation exercises",
+            "Queue-based applications",
+            "ADT implementation project"
+          ],
+          "title": null,
+          "description": null,
+          "thumbnailURL": null
+        }
+      ],
+      "title": "Data Structures and Algorithms - Learning Objectives",
+      "description": "Comprehensive learning objectives and weekly plans for Data Structures and Algorithms course",
+      "thumbnailURL": "https://example.com/dsa-course-thumbnail.jpg"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../learning-objectives",
+        "name": "LearningObjectives"
+      }
+    }
+  }
+}

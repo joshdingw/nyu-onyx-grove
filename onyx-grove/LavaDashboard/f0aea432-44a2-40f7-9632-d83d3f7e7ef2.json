@@ -1,0 +1,16 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "title": "Lava Dashboard",
+      "description": null,
+      "thumbnailURL": "https://assets.grok.com/users/d81e68e2-c259-4a5f-904c-26187e7178d7/RUVtsesp9IS6F7GJ-generated_image.jpg"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../dashboard",
+        "name": "LavaDashboard"
+      }
+    }
+  }
+}

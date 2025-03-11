@@ -1,0 +1,50 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "summary": "An exciting after-school club where middle school students form rock bands, learn popular songs, and develop their musical performance skills.",
+      "name": "Rock Band Club",
+      "schoolYear": {
+        "periodLabel": "2024-25"
+      },
+      "active": true,
+      "startTime": "15:30",
+      "endTime": "17:00",
+      "meetingDays": [
+        "Monday",
+        "Wednesday"
+      ],
+      "title": "",
+      "description": "The Rock Band Club is designed for older students interested in contemporary music performance. Members will form bands, learn to play together as an ensemble, and explore various rock music styles. The club utilizes the music room's equipment including electric guitars, drums, and sound system. Students will learn about stage presence, sound mixing, and will have opportunities to perform at school events.",
+      "thumbnailURL": "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    "relationships": {
+      "clubLeader": {
+        "links": {
+          "self": "../Staff/3cd57651-318e-49f0-b9db-6424caa1d9a3"
+        }
+      },
+      "location": {
+        "links": {
+          "self": "../Location/0abf72c4-07ce-468c-8183-e168b676c294"
+        }
+      },
+      "cohort": {
+        "links": {
+          "self": null
+        }
+      },
+      "staff.0": {
+        "links": {
+          "self": "../Staff/3cd57651-318e-49f0-b9db-6424caa1d9a3"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../club-offering",
+        "name": "Club"
+      }
+    }
+  }
+}

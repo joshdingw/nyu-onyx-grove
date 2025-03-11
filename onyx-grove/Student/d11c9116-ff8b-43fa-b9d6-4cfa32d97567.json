@@ -1,0 +1,20 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "fullName": "Marcus Thompson",
+      "dateOfBirth": "2015-09-23",
+      "staffingRatio": "2:1",
+      "active": true,
+      "title": "Marcus Thompson - Grade 5",
+      "description": "Fifth-grade student with strengths in creative writing and leadership",
+      "thumbnailURL": "https://images.unsplash.com/photo-1545696968-1a5245650b36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../student",
+        "name": "Student"
+      }
+    }
+  }
+}

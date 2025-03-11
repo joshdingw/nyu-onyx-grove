@@ -1,0 +1,18 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "category": "Related Services",
+      "subCategory": "Speech Therapy",
+      "tag": "ST",
+      "description": "Speech, language, and communication development support",
+      "thumbnailURL": "https://images.unsplash.com/photo-1581078426770-6d336e5de7bf"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../domain-area",
+        "name": "DomainArea"
+      }
+    }
+  }
+}

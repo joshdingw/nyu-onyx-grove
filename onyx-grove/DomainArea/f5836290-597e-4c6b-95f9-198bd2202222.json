@@ -1,0 +1,18 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "category": "Related Services",
+      "subCategory": "Physical Therapy",
+      "tag": "PT",
+      "description": "Gross motor skills and physical movement development",
+      "thumbnailURL": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../domain-area",
+        "name": "DomainArea"
+      }
+    }
+  }
+}

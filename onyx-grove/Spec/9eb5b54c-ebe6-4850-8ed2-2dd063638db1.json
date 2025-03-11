@@ -1,0 +1,30 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Educational Goal Field",
+      "readMe": "# Educational Goal Field\n\nA field for tracking and evaluating educational goals with support for time periods, ratings, and domain areas.\n\n## Fields\n\n### domainArea (Link)\nLinks to a DomainArea card that categorizes the educational goal.\n\n### goalSummary (TextArea)\nA detailed description of the educational goal.\n\n### rating (Number)\nA numerical assessment of progress on the goal, from 1 to 5.\n\n### ratingDescription (String, computed)\nAutomatically generates a description based on the rating value:\n\n- **1**: Not Applicable\n- **2**: Emerging Skill\n- **3**: Progress Made with Moderate Support\n- **4**: Progress Made with Minimal Support\n- **5**: Mastery of Skill\n\n### Time Period Fields\n\n#### period (TimePeriod)\nLinks to a TimePeriod field for structured time ranges (e.g., academic years, quarters, etc.).\n\n#### customStartDate (Date)\nOptional custom start date that overrides the period's start date.\n\n#### customEndDate (Date)\nOptional custom end date that overrides the period's end date.\n\n#### startDate (Date, computed)\nEffective start date, prioritizing customStartDate over period.startDate.\n\n#### endDate (Date, computed)\nEffective end date, prioritizing customEndDate over period.endDate.\n\n## Display\n\nThe embedded view shows:\n- Goal summary text\n- Rating badge and description (if rating exists)\n- Date range, showing either:\n  - TimePeriod field display\n  - Custom date range in MM/DD/YY format\n\nStyling follows the Boxel design system with:\n- Purple accents for rating badges\n- Clear typography hierarchy\n- Consistent spacing and layout\n\n## Usage Example\n\n```typescript\n@field educationalGoal = contains(EducationalGoalField);\n```\n\n## Date Handling\n\nThe field provides flexible date handling through:\n1. Structured time periods using the TimePeriod field\n2. Custom date overrides for specific cases\n3. Computed effective dates that respect the override hierarchy\n\nThis allows for both standardized academic periods and custom date ranges when needed.",
+      "ref": {
+        "name": "EducationalGoalField",
+        "module": "../educational-goal-field"
+      },
+      "specType": "field",
+      "containedExamples": [],
+      "description": "A field for tracking and evaluating educational goals with support for time periods, ratings, and domain areas.",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "linkedExamples": {
+        "links": {
+          "self": null
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "https://cardstack.com/base/spec",
+        "name": "Spec"
+      }
+    }
+  }
+}

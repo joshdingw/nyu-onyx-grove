@@ -1,0 +1,28 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "date": "2026-01-30T00:00:00.000Z",
+      "name": "Teacher Work Day - No School",
+      "isNoSchool": true,
+      "isEarlyDismissal": false,
+      "isSchoolClosed": false,
+      "title": "Teacher Work Day",
+      "description": "No school for students. Teachers will be preparing for the new quarter.",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "category": {
+        "links": {
+          "self": "../SchoolCalendarCategory/d962c4c3-0c13-45d6-a259-fd9e995be80b"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../school-calendar",
+        "name": "SchoolCalendarEvent"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "courseTitle": "Foundation of Finance",
+      "semester": "Spring 2024",
+      "overallObjectives": "Students will develop a comprehensive understanding of fundamental financial concepts, analytical skills, and practical applications in modern finance. Through hands-on exercises, case studies, and real-world examples, students will master essential financial principles while developing critical thinking and analytical capabilities. The course combines theoretical frameworks with practical problem-solving using industry-standard tools and methods.",
+      "classObjectives": [
+        "Week 1 | Time Value of Money: Learn to calculate present and future values, understand annuity calculations and timing in financial decisions",
+        "Week 2 | Perpetuity and Financial Modeling: Apply concepts to real estate and bond valuations, explore infinite cash flow streams",
+        "Week 3 | Interest Calculations: Master simple and compound interest, analyze rate structures and effective vs. nominal rates",
+        "Week 4 | Bond Analysis: Study bond pricing, yield calculations, duration and convexity concepts",
+        "Week 5 | Stock Valuation: Explore valuation methods, dividend discount models, and fundamental analysis techniques",
+        "Week 6 | Risk Management: Study portfolio theory, diversification principles, and risk-return relationships",
+        "Week 7 | Capital Budgeting: Learn NPV, IRR calculations, and investment decision frameworks",
+        "Week 8 | Financial Analysis: Master statement analysis, key metrics, and company valuation methods"
+      ],
+      "courseImage": "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?auto=format&fit=crop&w=1200&q=80",
+      "departmentIcon": "https://cdn-icons-png.flaticon.com/512/2830/2830289.png",
+      "progressPercentage": "25%",
+      "lastUpdated": "2024-01-15"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../course-learning-objectives",
+        "name": "CourseLearningObjectives"
+      }
+    }
+  }
+}
