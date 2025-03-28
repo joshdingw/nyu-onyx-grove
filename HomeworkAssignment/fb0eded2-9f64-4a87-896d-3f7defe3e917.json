@@ -1,0 +1,23 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": null,
+      "description": null,
+      "category": {},
+      "priority": {
+        "stringValue": "Medium"
+      },
+      "progress": {},
+      "dueDate": null,
+      "title": null,
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../homework-assignment",
+        "name": "HomeworkAssignment"
+      }
+    }
+  }
+}
