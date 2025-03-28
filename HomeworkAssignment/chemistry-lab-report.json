@@ -1,0 +1,25 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Chemistry Lab Report: Titration Experiments",
+      "description": "Write a comprehensive report on the acid-base titration experiments conducted in lab",
+      "category": {
+        "stringValue": "Science"
+      },
+      "priority": {
+        "stringValue": "High"
+      },
+      "progress": {
+        "stringValue": "Not Started"
+      },
+      "dueDate": "2023-11-25T23:59:00"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../homework-assignment",
+        "name": "HomeworkAssignment"
+      }
+    }
+  }
+}

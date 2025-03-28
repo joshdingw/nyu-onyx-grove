@@ -1,0 +1,25 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Literature Essay on Moby Fish",
+      "description": "1500-word analysis of symbolism in Moby Fish",
+      "category": {
+        "stringValue": "Humanities"
+      },
+      "priority": {
+        "stringValue": "Medium"
+      },
+      "progress": {
+        "stringValue": "In Progress"
+      },
+      "dueDate": "2023-11-20T12:00:00"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../homework-assignment",
+        "name": "HomeworkAssignment"
+      }
+    }
+  }
+}

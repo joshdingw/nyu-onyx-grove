@@ -1,0 +1,25 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Programming Assignment: Binary Trees",
+      "description": "Implement a binary search tree with traversal algorithms",
+      "category": {
+        "stringValue": "Computer Science"
+      },
+      "priority": {
+        "stringValue": "High"
+      },
+      "progress": {
+        "stringValue": "Not Started"
+      },
+      "dueDate": "2023-11-18T23:59:00"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../homework-assignment",
+        "name": "HomeworkAssignment"
+      }
+    }
+  }
+}

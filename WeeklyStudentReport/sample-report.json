@@ -1,0 +1,42 @@
+{
+  "data": {
+    "type": "weekly-student-report",
+    "attributes": {
+      "studentName": "Alex Thompson",
+      "weekEnding": "2024-03-15T23:59:59Z",
+      "activities": [
+        {
+          "type": "Homework",
+          "title": "Polynomial Practice",
+          "subject": "Mathematics",
+          "completion": "Completed",
+          "performance": 92
+        },
+        {
+          "type": "Quiz",
+          "title": "Cell Biology",
+          "subject": "Science",
+          "completion": "Completed",
+          "performance": 88
+        },
+        {
+          "type": "Sport",
+          "title": "Basketball Practice",
+          "subject": "Physical Education",
+          "completion": "Attended",
+          "performance": null
+        }
+      ],
+      "behaviorNotes": "Alex has shown excellent focus during class discussions and helps other students understand difficult concepts.",
+      "teacherFeedback": "Strong performance in mathematics this week. Consider joining the science club to further develop interest in biology.",
+      "parentComments": "We've noticed increased enthusiasm for math at home. Thank you for the engaging polynomial lessons.",
+      "overallProgress": "Excellent Progress"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../weekly-student-report",
+        "name": "WeeklyStudentReport"
+      }
+    }
+  }
+}

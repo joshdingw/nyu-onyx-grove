@@ -1,0 +1,25 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "History Research Project Outline",
+      "description": "Create detailed outline for final research paper",
+      "category": {
+        "stringValue": "Social Sciences"
+      },
+      "priority": {
+        "stringValue": "Medium"
+      },
+      "progress": {
+        "stringValue": "Completed"
+      },
+      "dueDate": "2023-11-05T23:59:00"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../homework-assignment",
+        "name": "HomeworkAssignment"
+      }
+    }
+  }
+}

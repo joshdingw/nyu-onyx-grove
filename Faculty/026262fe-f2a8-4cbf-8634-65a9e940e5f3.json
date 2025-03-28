@@ -1,0 +1,27 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Tiger",
+      "email": "tiger@forest.com",
+      "phone": "111-111-1111",
+      "officeLocation": "cave in the forest",
+      "title": "Dean Tiger",
+      "description": null,
+      "thumbnailURL": "https://cdn.pixabay.com/photo/2018/05/23/18/54/tiger-3424791_1280.jpg"
+    },
+    "relationships": {
+      "department": {
+        "links": {
+          "self": "../Department/c007f2c7-b7ab-4598-a3c6-80a2c7629128"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../faculty",
+        "name": "Faculty"
+      }
+    }
+  }
+}

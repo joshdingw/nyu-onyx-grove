@@ -1,0 +1,25 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Calculus Review Worksheet",
+      "description": "Practice problems for midterm exam",
+      "category": {
+        "stringValue": "Mathematics"
+      },
+      "priority": {
+        "stringValue": "High"
+      },
+      "progress": {
+        "stringValue": "In Progress"
+      },
+      "dueDate": "2023-11-10T08:30:00"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../homework-assignment",
+        "name": "HomeworkAssignment"
+      }
+    }
+  }
+}

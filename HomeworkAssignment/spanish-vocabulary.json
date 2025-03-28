@@ -1,0 +1,25 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Spanish Vocabulary Quiz Preparation",
+      "description": "Study chapters 7-9 vocabulary lists for Friday's quiz",
+      "category": {
+        "stringValue": "Languages"
+      },
+      "priority": {
+        "stringValue": "Medium"
+      },
+      "progress": {
+        "stringValue": "In Progress"
+      },
+      "dueDate": "2023-11-16T09:00:00"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../homework-assignment",
+        "name": "HomeworkAssignment"
+      }
+    }
+  }
+}

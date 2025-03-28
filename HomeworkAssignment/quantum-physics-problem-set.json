@@ -1,0 +1,25 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Quantum Physics Problem Set #3",
+      "description": "Complete problems 15-30 from Chapter 4",
+      "category": {
+        "stringValue": "Science"
+      },
+      "priority": {
+        "stringValue": "High"
+      },
+      "progress": {
+        "stringValue": "Not Started"
+      },
+      "dueDate": "2023-11-15T23:59:00"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../homework-assignment",
+        "name": "HomeworkAssignment"
+      }
+    }
+  }
+}
