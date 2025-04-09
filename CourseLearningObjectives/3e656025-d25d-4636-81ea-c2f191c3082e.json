@@ -1,0 +1,33 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "courseTitle": "World History: Ancient Civilizations",
+      "semester": "Spring 2024",
+      "overallObjectives": "Students will explore the development of human civilization from prehistoric times through the fall of major ancient empires. Through archaeological evidence, historical texts, and cultural analysis, students will understand the interconnections between different societies and their lasting impact on modern civilization. The course emphasizes critical thinking about historical sources and understanding patterns of social development.",
+      "classObjectives": [
+        "Week 1 | Early Human Societies: Examine the transition from hunter-gatherer to agricultural communities",
+        "Week 2 | Mesopotamian Civilizations: Study the rise of city-states and early writing systems",
+        "Week 3 | Ancient Egypt: Analyze the role of the Nile and development of complex society",
+        "Week 4 | Bronze Age Cultures: Compare Mediterranean and Asian bronze age societies",
+        "Week 5 | Classical Greece: Explore democracy, philosophy, and cultural achievements",
+        "Week 6 | Roman Empire: Study political systems and cultural assimilation",
+        "Week 7 | Ancient Americas: Examine Mayan and Incan civilizations",
+        "Week 8 | Final Project: Create comparative analysis of ancient civilizations"
+      ],
+      "courseImage": "https://images.unsplash.com/photo-1548018560-c7196d99ecc4?auto=format&fit=crop&w=1200&q=80",
+      "departmentIcon": "https://cdn-icons-png.flaticon.com/512/2920/2920323.png",
+      "progressPercentage": "55%",
+      "lastUpdated": "2024-01-12",
+      "title": null,
+      "description": null,
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../course-learning-objectives",
+        "name": "CourseLearningObjectives"
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "description": "Your answer 'Because it is a district' is partially correct. 'DC' stands for District of Columbia, which indicates its status as a federal district rather than a state. Consider the historical reasons behind its establishment as the nation’s capital.",
+      "question": "Why is Washington DC called DC?",
+      "answer": "Because it is a distrcit",
+      "grade": "C",
+      "title": null,
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "answerKey": {
+        "links": {
+          "self": "../AnswerKey/06cb8247-7e42-4231-9e27-b7d75da3b9ad"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../problem-grader",
+        "name": "Problem"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "equipmentId": 1007,
+      "name": "Standing Desk Converter",
+      "quantity": {
+        "value": 4
+      },
+      "title": "Adjustable Desk Riser",
+      "description": "Height-adjustable standing desk converter",
+      "thumbnailURL": "https://picsum.photos/id/380/800/600"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../equipment",
+        "name": "Equipment"
+      }
+    }
+  }
+}

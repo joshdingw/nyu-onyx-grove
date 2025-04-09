@@ -1,0 +1,21 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "equipmentId": 1005,
+      "name": "Docking Station Pro",
+      "quantity": {
+        "value": 6
+      },
+      "title": "Universal Laptop Dock",
+      "description": "Multi-port docking station with power delivery",
+      "thumbnailURL": "https://picsum.photos/id/60/800/600"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../equipment",
+        "name": "Equipment"
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "title": null,
+      "courseTitle": "Quantum Physics",
+      "dueDate": "2024-02-01",
+      "instructions": "# Homework Submission Guidelines\n\n1. Create a markdown (.md) file containing your answers\n2. Use proper markdown formatting for equations (LaTeX syntax between $$ symbols)\n3. Include diagrams as embedded images if needed\n4. Structure your answers using the provided template\n5. Submit only one file containing all answers\n\nYour submission will be automatically graded by AI, which will evaluate:\n- Accuracy of concepts\n- Completeness of answers\n- Proper use of mathematical notation\n- Clarity of explanations",
+      "questions": [
+        {
+          "question": "Explain the concept of quantum superposition and provide a real-world example of its application in quantum computing.",
+          "maxPoints": 25,
+          "points": 23,
+          "feedback": "Excellent explanation of quantum superposition with clear mathematical representation. Good real-world application example with qubits and Shor's algorithm. Could have elaborated slightly more on the practical implications."
+        },
+        {
+          "question": "Derive the time-independent Schrödinger equation and explain its significance in quantum mechanics.",
+          "maxPoints": 25,
+          "points": 24,
+          "feedback": "Very thorough derivation showing clear understanding of the separation of variables. Excellent explanation of significance with well-structured points."
+        },
+        {
+          "question": "Compare and contrast the classical and quantum mechanical descriptions of a particle in a box. Include relevant equations and energy level diagrams.",
+          "maxPoints": 25,
+          "points": 22,
+          "feedback": "Good comparison with clear contrasting points. Equations are correct and well-presented. Would benefit from more detailed energy level diagrams, but mathematical foundations are solid."
+        },
+        {
+          "question": "Describe how quantum entanglement works and explain its potential applications in quantum cryptography.",
+          "maxPoints": 25,
+          "points": 24,
+          "feedback": "Excellent explanation of entanglement with proper mathematical notation. Very good coverage of QKD and practical applications. Well-structured response with clear examples."
+        }
+      ],
+      "submissionFile": "blob:https://app.boxel.ai/3e98df37-4e12-4d6b-8f98-cdaebde5798e",
+      "totalScore": 85,
+      "maxScore": 100,
+      "status": "graded",
+      "aiGradingFeedback": "# Grading Feedback\n\nWell-structured answers...",
+      "description": null,
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "answer": {
+        "links": {
+          "self": "../Answer/22a0bfc1-fe1e-476b-93e3-b892f7be6b0f"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../assignmentsubmission",
+        "name": "Homeworkassignment"
+      }
+    }
+  }
+}

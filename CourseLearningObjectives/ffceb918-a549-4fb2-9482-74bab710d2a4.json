@@ -1,0 +1,33 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "courseTitle": "Quantum Physics",
+      "semester": "Spring 2024",
+      "overallObjectives": "This advanced course explores the fundamental principles of quantum mechanics and their applications in modern physics. Students will develop a deep understanding of quantum phenomena through mathematical analysis and experimental observations. The course combines theoretical physics with practical laboratory work to demonstrate quantum effects and their technological applications.",
+      "classObjectives": [
+        "Week 1 | Quantum Foundations: Review wave-particle duality and uncertainty principle",
+        "Week 2 | Wave Functions: Master Schrödinger equation and probability interpretations",
+        "Week 3 | Quantum States: Analyze spin systems and quantum superposition",
+        "Week 4 | Quantum Tunneling: Study barrier penetration and applications",
+        "Week 5 | Quantum Computing: Explore qubits and quantum algorithms",
+        "Week 6 | Entanglement: Investigate quantum correlations and EPR paradox",
+        "Week 7 | Applications: Study quantum cryptography and teleportation",
+        "Week 8 | Final Project: Design quantum physics experiment"
+      ],
+      "courseImage": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1200&q=80",
+      "departmentIcon": "https://cdn-icons-png.flaticon.com/512/2920/2920312.png",
+      "progressPercentage": "40%",
+      "lastUpdated": "2024-01-17",
+      "title": null,
+      "description": null,
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../course-learning-objectives",
+        "name": "CourseLearningObjectives"
+      }
+    }
+  }
+}

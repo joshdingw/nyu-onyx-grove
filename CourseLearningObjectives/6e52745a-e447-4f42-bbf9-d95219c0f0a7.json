@@ -1,0 +1,33 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "courseTitle": "Digital Music Production",
+      "semester": "Spring 2024",
+      "overallObjectives": "Students will master the fundamentals of digital music production, including sound design, mixing, and music arrangement. Through hands-on experience with industry-standard digital audio workstations, students will develop technical skills while exploring creative expression. The course combines theoretical understanding of music technology with practical production techniques.",
+      "classObjectives": [
+        "Week 1 | DAW Fundamentals: Master the interface and basic workflow of digital audio workstations",
+        "Week 2 | Sound Design: Create and manipulate synthetic sounds using various synthesis methods",
+        "Week 3 | Recording Techniques: Learn microphone placement and digital recording practices",
+        "Week 4 | MIDI Production: Explore electronic music creation and virtual instruments",
+        "Week 5 | Mixing Essentials: Study EQ, compression, and effects processing",
+        "Week 6 | Arrangement: Develop song structure and orchestration techniques",
+        "Week 7 | Music Business: Understand licensing, distribution, and marketing",
+        "Week 8 | Final Project: Produce and release an original music collection"
+      ],
+      "courseImage": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80",
+      "departmentIcon": "https://cdn-icons-png.flaticon.com/512/2920/2920290.png",
+      "progressPercentage": "80%",
+      "lastUpdated": "2024-01-18",
+      "title": null,
+      "description": null,
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../course-learning-objectives",
+        "name": "CourseLearningObjectives"
+      }
+    }
+  }
+}

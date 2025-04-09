@@ -1,0 +1,21 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "equipmentId": 1004,
+      "name": "Ergonomic Office Chair",
+      "quantity": {
+        "value": 8
+      },
+      "title": "Premium Task Chair",
+      "description": "Adjustable ergonomic office chair with lumbar support",
+      "thumbnailURL": "https://picsum.photos/id/1056/800/600"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../equipment",
+        "name": "Equipment"
+      }
+    }
+  }
+}

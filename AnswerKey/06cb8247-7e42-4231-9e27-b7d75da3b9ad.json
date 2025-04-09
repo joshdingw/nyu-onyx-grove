@@ -1,0 +1,29 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "answerExplanation": "iambic pentameter, in poetry, a line of verse composed of ten syllables arranged in five metrical feet (iambs), each of which consists of an unstressed syllable followed by a stressed syllable",
+      "title": "Iambic Pentameter",
+      "description": null,
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "gradingSkill": {
+        "links": {
+          "self": "../SkillCard/df9486c0-0406-4fd3-82ac-7d7e96249df9"
+        }
+      },
+      "guidingSkill": {
+        "links": {
+          "self": "../SkillCard/dfdc3fae-1e18-47cc-8162-4e43e52ab5e5"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../problem-grader",
+        "name": "AnswerKey"
+      }
+    }
+  }
+}

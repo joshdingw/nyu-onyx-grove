@@ -1,0 +1,21 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": "Math Assignment - Calculus",
+      "description": "Complete exercises 1-20 from Chapter 3",
+      "category": "Mathematics",
+      "priority": "High",
+      "progress": "Not Started",
+      "dueDate": "2024-03-25",
+      "title": "Calculus Homework #1",
+      "thumbnailURL": "https://example.com/math-icon.png"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../homework-assignment",
+        "name": "HomeworkAssignment"
+      }
+    }
+  }
+}

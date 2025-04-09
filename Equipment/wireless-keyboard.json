@@ -1,0 +1,21 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "equipmentId": 1003,
+      "name": "Wireless Keyboard & Mouse Combo",
+      "quantity": {
+        "value": 12
+      },
+      "title": "Wireless Input Combo",
+      "description": "Professional wireless keyboard and mouse set",
+      "thumbnailURL": "https://picsum.photos/id/4/800/600"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../equipment",
+        "name": "Equipment"
+      }
+    }
+  }
+}

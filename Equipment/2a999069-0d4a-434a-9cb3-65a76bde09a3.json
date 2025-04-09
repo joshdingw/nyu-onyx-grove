@@ -1,0 +1,21 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "equipmentId": 1008,
+      "name": "Noise-Canceling Headphones",
+      "quantity": {
+        "value": 15
+      },
+      "title": "Professional Headset",
+      "description": "Wireless noise-canceling headphones for office use",
+      "thumbnailURL": "https://picsum.photos/id/367/800/600"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../equipment",
+        "name": "Equipment"
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "title": "Digital Music Production - Week 4 Assignment",
+      "courseTitle": "Digital Music Production",
+      "dueDate": "2024-02-15",
+      "instructions": "# Homework Submission Guidelines\n\n1. Create a markdown (.md) file containing your answers\n2. Include audio samples as links where required\n3. Use proper technical terminology\n4. Structure your answers using the provided template\n5. Submit only one file containing all answers\n\nYour submission will be automatically graded by AI, which will evaluate:\n- Technical accuracy\n- Sound design principles\n- Production techniques\n- Creative application",
+      "questions": [
+        {
+          "question": "Explain the concept of sidechain compression and provide three creative applications in electronic music production. Include specific parameter settings for each example.",
+          "maxPoints": 25,
+          "points": null,
+          "feedback": null
+        },
+        {
+          "question": "Analyze the frequency spectrum of a kick drum and explain how you would process it to sit well in a mix with a bass line. Include specific EQ settings and processing chain.",
+          "maxPoints": 25,
+          "points": null,
+          "feedback": null
+        },
+        {
+          "question": "Describe the principles of sound synthesis and create a complex pad sound using at least three different synthesis methods. Document your signal flow and parameter settings.",
+          "maxPoints": 25,
+          "points": null,
+          "feedback": null
+        },
+        {
+          "question": "Compare and contrast different reverb algorithms (plate, hall, room) and explain when to use each in a mix. Provide specific examples from different music genres.",
+          "maxPoints": 25,
+          "points": null,
+          "feedback": null
+        }
+      ],
+      "submissionFile": "blob:https://app.boxel.ai/8c4b617e-89c0-4296-9131-78decf4786fb",
+      "totalScore": 85,
+      "maxScore": 100,
+      "status": "graded",
+      "aiGradingFeedback": "# Grading Feedback\n\nWell-structured answers...",
+      "description": null,
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "answer": {
+        "links": {
+          "self": "../Answer/22a0bfc1-fe1e-476b-93e3-b892f7be6b0f"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../assignmentsubmission",
+        "name": "Homeworkassignment"
+      }
+    }
+  }
+}

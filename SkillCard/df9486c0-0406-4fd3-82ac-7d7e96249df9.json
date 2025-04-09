@@ -1,0 +1,18 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "instructions": "THE USER ASKING IS THE STUDENT.\n\nGrade the students homework assignment. You should use the answer key and guidance as attached, and add the grade using PatchCard. PatchCard lets you selectively update fields, provide only the top level fields you want to change, and they will be fully replaced. Never change the student answers. \n\nIn your responses, provide useful feedback, WITHOUT PROVIDING THE EXACT ANSWER.",
+      "commands": [],
+      "title": "Grading Skill",
+      "description": null,
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "https://cardstack.com/base/skill-card",
+        "name": "SkillCard"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "equipmentId": 1001,
+      "name": "Smart Workstation X1",
+      "quantity": {
+        "value": 5
+      },
+      "title": "Professional Workstation",
+      "description": "High-performance computing workstation",
+      "thumbnailURL": "https://picsum.photos/id/48/800/600"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../equipment",
+        "name": "Equipment"
+      }
+    }
+  }
+}

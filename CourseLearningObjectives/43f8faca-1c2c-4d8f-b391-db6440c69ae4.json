@@ -1,0 +1,33 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "courseTitle": "Psychology of Human Behavior",
+      "semester": "Spring 2024",
+      "overallObjectives": "This course provides a comprehensive introduction to human psychology, examining the biological, cognitive, and social factors that influence behavior. Students will explore major psychological theories while developing critical thinking skills through research analysis and experimental design. Emphasis is placed on understanding both individual and group behavioral patterns.",
+      "classObjectives": [
+        "Week 1 | Foundations of Psychology: Explore major theories and research methods",
+        "Week 2 | Brain and Behavior: Study neural basis of psychological processes",
+        "Week 3 | Learning and Memory: Analyze how experiences shape behavior",
+        "Week 4 | Emotion and Motivation: Examine factors driving human actions",
+        "Week 5 | Social Psychology: Investigate group dynamics and influence",
+        "Week 6 | Personality Theory: Study individual differences and development",
+        "Week 7 | Psychological Disorders: Understand mental health and treatment",
+        "Week 8 | Final Project: Design and conduct behavioral research study"
+      ],
+      "courseImage": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=1200&q=80",
+      "departmentIcon": "https://cdn-icons-png.flaticon.com/512/2920/2920336.png",
+      "progressPercentage": "70%",
+      "lastUpdated": "2024-01-14",
+      "title": null,
+      "description": null,
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../course-learning-objectives",
+        "name": "CourseLearningObjectives"
+      }
+    }
+  }
+}

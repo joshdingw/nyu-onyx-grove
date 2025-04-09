@@ -1,0 +1,21 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "equipmentId": 1002,
+      "name": "HD Monitor M27",
+      "quantity": {
+        "value": 4
+      },
+      "title": "27-inch Professional Display",
+      "description": "High resolution professional monitor for creative work",
+      "thumbnailURL": "https://picsum.photos/id/365/800/600"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../equipment",
+        "name": "Equipment"
+      }
+    }
+  }
+}
