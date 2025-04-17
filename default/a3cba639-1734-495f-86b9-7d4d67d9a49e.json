@@ -1,0 +1,34 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "studentName": null,
+      "courseId": null,
+      "courseName": null,
+      "semester": null,
+      "academicYear": null,
+      "weeklyPerformance": [],
+      "topicMastery": [],
+      "activeRecommendations": [],
+      "courseProgress": {
+        "courseCompletionPercentage": null,
+        "currentWeek": null,
+        "totalWeeks": null,
+        "overallGrade": null,
+        "strengthAreas": [],
+        "improvementAreas": []
+      },
+      "lastUpdated": null,
+      "nextAssessmentDate": null,
+      "title": null,
+      "description": null,
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../progress-tracking",
+        "name": "default"
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "name": null,
+      "schoolYear": {
+        "periodLabel": null
+      },
+      "active": false,
+      "startTime": null,
+      "endTime": null,
+      "meetingDays": [],
+      "title": null,
+      "description": null,
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "location": {
+        "links": {
+          "self": null
+        }
+      },
+      "cohort": {
+        "links": {
+          "self": null
+        }
+      },
+      "staff": {
+        "links": {
+          "self": null
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../offering",
+        "name": "Offering"
+      }
+    }
+  }
+}

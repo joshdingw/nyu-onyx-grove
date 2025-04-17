@@ -1,0 +1,152 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "studentName": "James Wilson",
+      "courseId": "DSA-2024-SPRING",
+      "currentWeek": 2,
+      "topicMasteryStatus": [
+        {
+          "topicName": "Introduction to Data Structures",
+          "masteryLevel": "Proficient",
+          "lastAssessedDate": "2024-01-19T23:59:59Z",
+          "relatedActivities": [
+            {
+              "activityName": "Array Manipulation Exercise",
+              "performance": 88,
+              "weekEnding": "2024-01-19T23:59:59Z"
+            },
+            {
+              "activityName": "Time Complexity Analysis",
+              "performance": 85,
+              "weekEnding": "2024-01-19T23:59:59Z"
+            }
+          ],
+          "improvementAreas": ["Space Complexity Analysis"]
+        },
+        {
+          "topicName": "Linked Lists and Recursion",
+          "masteryLevel": "In Progress",
+          "lastAssessedDate": "2024-01-26T23:59:59Z",
+          "relatedActivities": [
+            {
+              "activityName": "Linked List Implementation",
+              "performance": 92,
+              "weekEnding": "2024-01-26T23:59:59Z"
+            },
+            {
+              "activityName": "Recursive Problem Solving",
+              "performance": 87,
+              "weekEnding": "2024-01-26T23:59:59Z"
+            }
+          ],
+          "improvementAreas": ["Advanced Pointer Manipulation"]
+        }
+      ],
+      "weeklyPerformanceHistory": [
+        {
+          "weekEnding": "2024-01-19T23:59:59Z",
+          "averagePerformance": 87.6,
+          "completedActivities": [
+            "Array Manipulation Exercise",
+            "Time Complexity Analysis",
+            "Basic Data Structures Quiz"
+          ],
+          "masteredConcepts": [
+            "Array Implementation",
+            "Basic Time Complexity"
+          ],
+          "challengingAreas": [
+            "Space Complexity Analysis"
+          ]
+        },
+        {
+          "weekEnding": "2024-01-26T23:59:59Z",
+          "averagePerformance": 89.6,
+          "completedActivities": [
+            "Linked List Implementation",
+            "Recursive Problem Solving",
+            "List Manipulation Project"
+          ],
+          "masteredConcepts": [
+            "Basic Linked List Operations",
+            "Simple Recursion"
+          ],
+          "challengingAreas": [
+            "Advanced Pointer Manipulation"
+          ]
+        }
+      ],
+      "upcomingRecommendations": [
+        {
+          "topic": "Space Complexity Analysis",
+          "reason": "Performance in complexity analysis workshop indicates need for additional practice",
+          "suggestedActivities": [
+            "Review space complexity lecture materials",
+            "Complete additional practice problems",
+            "Attend office hours for personalized guidance"
+          ],
+          "priority": "High",
+          "targetWeek": "2024-01-29T23:59:59Z"
+        },
+        {
+          "topic": "Advanced Pointer Manipulation",
+          "reason": "Foundational for upcoming doubly linked list implementation",
+          "suggestedActivities": [
+            "Practice pointer diagrams",
+            "Complete supplementary exercises",
+            "Review linked list implementation code"
+          ],
+          "priority": "Medium",
+          "targetWeek": "2024-02-02T23:59:59Z",
+          "prerequisiteTopics": ["Basic Linked List Operations"]
+        }
+      ],
+      "topicDependencies": [
+        {
+          "topic": "Linked Lists",
+          "prerequisites": ["Array Implementation", "Basic Time Complexity"],
+          "dependentTopics": ["Stacks", "Queues"]
+        },
+        {
+          "topic": "Recursion",
+          "prerequisites": ["Basic Control Structures"],
+          "dependentTopics": ["Tree Traversal", "Recursive Sorting"]
+        }
+      ],
+      "learningPathAdjustments": [
+        {
+          "originalPlan": "Move to Stacks and Queues in Week 3",
+          "adjustedPlan": "Spend additional time on pointer manipulation before Stacks and Queues",
+          "justification": "Need to strengthen foundation in pointer manipulation for better understanding of advanced data structures",
+          "weekNumber": 3
+        }
+      ],
+      "overallProgress": {
+        "courseCompletionPercentage": 23,
+        "averagePerformance": 88.6,
+        "strengthAreas": [
+          "Basic Data Structure Implementation",
+          "Theoretical Understanding"
+        ],
+        "improvementAreas": [
+          "Space Complexity Analysis",
+          "Advanced Pointer Concepts"
+        ],
+        "consistentChallenges": [
+          "Complex Algorithm Analysis"
+        ]
+      },
+      "lastUpdated": "2024-01-26T23:59:59Z",
+      "nextReviewDate": "2024-02-02T23:59:59Z",
+      "title": "DSA Progress Tracking - James Wilson",
+      "description": "Comprehensive progress tracking for Data Structures and Algorithms course"
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../progress-tracking",
+        "name": "ProgressTracking"
+      }
+    }
+  }
+} 

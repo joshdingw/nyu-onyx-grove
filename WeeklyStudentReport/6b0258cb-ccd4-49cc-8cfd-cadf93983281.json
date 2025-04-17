@@ -1,0 +1,45 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "studentName": "James Wilson",
+      "weekEnding": "2024-01-26T23:59:59Z",
+      "activities": [
+        {
+          "type": "Project",
+          "title": "Linked List Implementation",
+          "subject": "Data Structures and Algorithms",
+          "completion": "Completed",
+          "performance": 92
+        },
+        {
+          "type": "Exercise",
+          "title": "Recursive Problem Solving",
+          "subject": "Data Structures and Algorithms",
+          "completion": "Completed",
+          "performance": 87
+        },
+        {
+          "type": "Assignment",
+          "title": "List Manipulation Project",
+          "subject": "Data Structures and Algorithms",
+          "completion": "Completed",
+          "performance": 90
+        }
+      ],
+      "behaviorNotes": "James has shown significant improvement in his analytical approach. His understanding of data structures has deepened, and he's become more confident in tackling complex problems. His questions during recursive programming sessions demonstrate deeper thinking.",
+      "teacherFeedback": "Excellent progress from last week. James has shown strong improvement in implementation skills, particularly in linked list operations. His recursive solutions are well thought out. The extra effort he put into understanding complexity analysis from week 1 is reflected in his improved project work. Suggested to explore doubly linked list implementations for additional challenge.",
+      "parentComments": "We've noticed James is more confident with the material now. He's been practicing recursive problems regularly and seems to really enjoy the practical aspects of linked list implementation.",
+      "overallProgress": "Excellent Progress",
+      "title": "Week 2 Progress Report - Data Structures",
+      "description": "Weekly progress report for Linked Lists and Recursion module",
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../weekly-student-report",
+        "name": "WeeklyStudentReport"
+      }
+    }
+  }
+}

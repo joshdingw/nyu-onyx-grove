@@ -2,11 +2,15 @@
   "data": {
     "type": "card",
     "attributes": {
-      "name": null,
+      "name": "test",
       "description": null,
       "category": {},
-      "priority": {},
-      "progress": {},
+      "priority": {
+        "stringValue": null
+      },
+      "progress": {
+        "stringValue": null
+      },
       "dueDate": null,
       "title": null,
       "thumbnailURL": null

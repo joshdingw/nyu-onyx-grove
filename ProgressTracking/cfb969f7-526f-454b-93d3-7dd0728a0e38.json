@@ -1,0 +1,98 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "studentName": "James Wilson",
+      "courseId": "DSA-2024-SPRING",
+      "courseName": "Data Structures and Algorithms",
+      "semester": "Spring",
+      "academicYear": "2023-2024",
+      "topicMastery": [
+        {
+          "topic": "Introduction to Data Structures",
+          "masteryLevel": "Proficient",
+          "lastAssessed": "2024-01-19T23:59:59Z"
+        },
+        {
+          "topic": "Linked Lists and Recursion",
+          "masteryLevel": "Advanced",
+          "lastAssessed": "2024-01-26T23:59:59Z"
+        }
+      ],
+      "overallFeedback": {
+        "summary": "James has shown excellent progress in the course, particularly in implementing data structures and solving problems recursively. His analytical skills have improved significantly, and he demonstrates a strong understanding of core concepts.",
+        "strengths": [
+          "Strong implementation skills, especially with linked lists",
+          "Excellent problem-solving approach",
+          "Good understanding of recursive algorithms",
+          "Active participation in class discussions"
+        ],
+        "areasForImprovement": [
+          "Time complexity analysis needs more practice",
+          "Space complexity understanding could be strengthened",
+          "Could benefit from more practice with doubly linked lists"
+        ]
+      },
+      "nextWeekLearningRecommendations": [
+        {
+          "topic": "Stacks and Queues",
+          "recommendations": [
+            "Review abstract data type (ADT) concepts before starting",
+            "Practice implementing basic stack operations (push, pop, peek)",
+            "Study queue implementations and their applications",
+            "Prepare for the ADT implementation project by reviewing previous data structure implementations"
+          ],
+          "preparationSteps": [
+            "Read the course materials on stack and queue ADTs",
+            "Complete the pre-class exercises on basic stack operations",
+            "Watch the recommended videos on queue-based applications",
+            "Review linked list implementations as they are foundational for stacks and queues"
+          ]
+        }
+      ],
+      "courseProgress": {
+        "courseCompletionPercentage": 66.67,
+        "currentWeek": 2,
+        "totalWeeks": 3,
+        "overallGrade": 89,
+        "strengthAreas": [
+          "Linked list implementation",
+          "Recursive problem-solving",
+          "Practical application of data structures"
+        ],
+        "improvementAreas": [
+          "Time complexity analysis",
+          "Space complexity understanding"
+        ]
+      },
+      "lastUpdated": "2024-01-26T23:59:59Z",
+      "nextAssessmentDate": "2024-02-02T00:00:00Z",
+      "title": "James Wilson - Data Structures Progress",
+      "description": "Progress tracking for Data Structures and Algorithms course, Spring 2024",
+      "thumbnailURL": "https://example.com/dsa-course-thumbnail.jpg"
+    },
+    "relationships": {
+      "learningObjectives": {
+        "links": {
+          "self": "../LearningObjectives/7bd6a5b0-94e1-4014-aafc-b66c3ead5b08"
+        }
+      },
+      "weeklyReports.0": {
+        "links": {
+          "self": "../WeeklyStudentReport/2ebde533-eef0-4e4c-afb5-2ba733441d41"
+        }
+      },
+      "weeklyReports.1": {
+        "links": {
+          "self": "../WeeklyStudentReport/6b0258cb-ccd4-49cc-8cfd-cadf93983281"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../progress-tracking",
+        "name": "ProgressTracking"
+      }
+    }
+  }
+}

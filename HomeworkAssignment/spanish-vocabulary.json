@@ -4,16 +4,16 @@
     "attributes": {
       "name": "Spanish Vocabulary Quiz Preparation",
       "description": "Study chapters 7-9 vocabulary lists for Friday's quiz",
-      "category": {
-        "stringValue": "Languages"
-      },
+      "category": {},
       "priority": {
         "stringValue": "Medium"
       },
       "progress": {
         "stringValue": "In Progress"
       },
-      "dueDate": "2023-11-16T09:00:00"
+      "dueDate": "2023-11-16T09:00:00.000Z",
+      "title": null,
+      "thumbnailURL": null
     },
     "meta": {
       "adoptsFrom": {

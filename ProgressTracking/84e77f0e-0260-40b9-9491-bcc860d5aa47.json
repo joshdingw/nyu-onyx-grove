@@ -1,0 +1,115 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "studentName": "James Wilson",
+      "courseId": "CS101-2024-SP",
+      "courseName": "Data Structures and Algorithms",
+      "semester": "Spring",
+      "academicYear": "2024",
+      "topicMastery": [
+        {
+          "topic": "Basic Data Structures",
+          "masteryLevel": "Proficient",
+          "lastAssessed": "2024-01-19",
+          "nextAssessment": "2024-02-19",
+          "progress": 88,
+          "notes": "Strong understanding of array operations and basic data structure concepts"
+        },
+        {
+          "topic": "Time Complexity Analysis",
+          "masteryLevel": "Developing",
+          "lastAssessed": "2024-01-19",
+          "nextAssessment": "2024-02-19",
+          "progress": 85,
+          "notes": "Making good progress, needs more practice with space complexity"
+        },
+        {
+          "topic": "Linked Lists",
+          "masteryLevel": "Proficient",
+          "lastAssessed": "2024-01-26",
+          "nextAssessment": "2024-02-26",
+          "progress": 92,
+          "notes": "Excellent implementation skills, particularly in linked list operations"
+        },
+        {
+          "topic": "Recursion",
+          "masteryLevel": "Proficient",
+          "lastAssessed": "2024-01-26",
+          "nextAssessment": "2024-02-26",
+          "progress": 87,
+          "notes": "Well thought out recursive solutions, showing good analytical approach"
+        }
+      ],
+      "activeRecommendations": [
+        {
+          "topic": "Doubly Linked Lists",
+          "currentMasteryLevel": "Beginner",
+          "targetMasteryLevel": "Proficient",
+          "suggestedActivities": [
+            "Implement doubly linked list operations",
+            "Compare performance with singly linked lists",
+            "Practice circular doubly linked list implementations"
+          ],
+          "priority": "High",
+          "dueDate": "2024-02-15",
+          "status": "In Progress"
+        },
+        {
+          "topic": "Advanced Recursion",
+          "currentMasteryLevel": "Developing",
+          "targetMasteryLevel": "Proficient",
+          "suggestedActivities": [
+            "Study tail recursion optimization",
+            "Practice recursive tree traversals",
+            "Implement recursive backtracking algorithms"
+          ],
+          "priority": "Medium",
+          "dueDate": "2024-02-28",
+          "status": "Not Started"
+        }
+      ],
+      "courseProgress": {
+        "courseCompletionPercentage": 12.5,
+        "currentWeek": 2,
+        "totalWeeks": 16,
+        "overallGrade": 88.7,
+        "strengthAreas": [
+          "Implementation skills",
+          "Analytical thinking",
+          "Recursive problem solving"
+        ],
+        "improvementAreas": [
+          "Space complexity analysis",
+          "Advanced recursion techniques"
+        ]
+      },
+      "lastUpdated": "2024-01-26",
+      "nextAssessmentDate": "2024-02-19",
+      "title": "Data Structures and Algorithms Progress Tracking",
+      "description": "Progress tracking for James Wilson in Data Structures and Algorithms course",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "learningObjectives": {
+        "links": {
+          "self": "../LearningObjectives/7bd6a5b0-94e1-4014-aafc-b66c3ead5b08.json"
+        }
+      },
+      "weeklyReports": {
+        "links": {
+          "self": [
+            "../WeeklyStudentReport/2ebde533-eef0-4e4c-afb5-2ba733441d41.json",
+            "../WeeklyStudentReport/6b0258cb-ccd4-49cc-8cfd-cadf93983281.json"
+          ]
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../progress-tracking",
+        "name": "ProgressTracking"
+      }
+    }
+  }
+}

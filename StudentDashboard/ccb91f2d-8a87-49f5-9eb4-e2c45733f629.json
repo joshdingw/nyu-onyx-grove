@@ -1,0 +1,24 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "currentSection": null,
+      "title": null,
+      "description": null,
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "calendar": {
+        "links": {
+          "self": "../SchoolCalendar/49e6e7a1-5fb5-4e07-9f22-82acafaa5e5e"
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../student-dashboard",
+        "name": "StudentDashboard"
+      }
+    }
+  }
+}

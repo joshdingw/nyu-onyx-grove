@@ -1,0 +1,85 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "studentName": "James Wilson",
+      "courseId": "CS101",
+      "courseName": "Introduction to Data Structures",
+      "semester": "Spring",
+      "academicYear": "2024",
+      "topicMastery": [
+        {
+          "topic": "Array Manipulation",
+          "masteryLevel": "Intermediate",
+          "lastAssessed": "2024-01-19",
+          "nextAssessment": "2024-01-26",
+          "progress": 75,
+          "notes": "Good understanding of basic operations, needs more practice with complex manipulations"
+        },
+        {
+          "topic": "Time Complexity Analysis",
+          "masteryLevel": "Beginner",
+          "lastAssessed": "2024-01-19",
+          "nextAssessment": "2024-01-26",
+          "progress": 60,
+          "notes": "Understanding basic concepts, needs more practice with analysis"
+        }
+      ],
+      "activeRecommendations": [
+        {
+          "topic": "Time Complexity Analysis",
+          "currentMasteryLevel": "Beginner",
+          "targetMasteryLevel": "Intermediate",
+          "suggestedActivities": [
+            "Complete additional practice problems",
+            "Review lecture notes on complexity analysis",
+            "Watch supplementary videos on Big O notation"
+          ],
+          "priority": "High",
+          "dueDate": "2024-01-26",
+          "status": "In Progress"
+        }
+      ],
+      "courseProgress": {
+        "courseCompletionPercentage": 15,
+        "currentWeek": 1,
+        "totalWeeks": 12,
+        "overallGrade": 87.7,
+        "strengthAreas": [
+          "Array Manipulation",
+          "Class Participation"
+        ],
+        "improvementAreas": [
+          "Time Complexity Analysis",
+          "Space Complexity Understanding"
+        ]
+      },
+      "lastUpdated": "2024-01-19",
+      "nextAssessmentDate": "2024-01-26",
+      "title": "James Wilson - Data Structures Progress Tracking",
+      "description": "Progress tracking for Introduction to Data Structures course",
+      "thumbnailURL": null
+    },
+    "relationships": {
+      "learningObjectives": {
+        "links": {
+          "self": "../LearningObjectives/learning-objectives-id"
+        }
+      },
+      "weeklyReports": {
+        "links": {
+          "self": [
+            "../WeeklyStudentReport/2ebde533-eef0-4e4c-afb5-2ba733441d41",
+            "../WeeklyStudentReport/6b025d33-eef0-4e4c-afb5-2ba733441d41"
+          ]
+        }
+      }
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../progress-tracking",
+        "name": "ProgressTracking"
+      }
+    }
+  }
+} 

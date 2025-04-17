@@ -1,0 +1,45 @@
+{
+  "data": {
+    "type": "card",
+    "attributes": {
+      "studentName": "James Wilson",
+      "weekEnding": "2024-01-19T23:59:59Z",
+      "activities": [
+        {
+          "type": "Assignment",
+          "title": "Array Manipulation Exercise",
+          "subject": "Data Structures and Algorithms",
+          "completion": "Completed",
+          "performance": 88
+        },
+        {
+          "type": "Workshop",
+          "title": "Time Complexity Analysis",
+          "subject": "Data Structures and Algorithms",
+          "completion": "Completed",
+          "performance": 85
+        },
+        {
+          "type": "Quiz",
+          "title": "Basic Data Structures",
+          "subject": "Data Structures and Algorithms",
+          "completion": "Completed",
+          "performance": 90
+        }
+      ],
+      "behaviorNotes": "James shows genuine interest in understanding fundamental concepts. He takes detailed notes during lectures and participates actively in class discussions about complexity analysis.",
+      "teacherFeedback": "Good start with array implementations. James grasps the basic concepts well but should focus more on time complexity analysis. Recommended additional practice problems for better understanding of space complexity.",
+      "parentComments": "James has been spending extra time studying the complexity analysis concepts. He mentioned finding the visual representations of algorithms particularly helpful.",
+      "overallProgress": "Good Progress",
+      "title": "Week 1 Progress Report - Data Structures",
+      "description": "Weekly progress report for Introduction to Data Structures module",
+      "thumbnailURL": null
+    },
+    "meta": {
+      "adoptsFrom": {
+        "module": "../weekly-student-report",
+        "name": "WeeklyStudentReport"
+      }
+    }
+  }
+}
